@@ -187,7 +187,7 @@ img {
 .hero-bg {
   position: absolute;
   inset: 0;
-  background-image: url('../images/752/11327066/WhatsAppImage2024-10-11at7.48.15AM.jpeg');
+  background-image: url('theme/hero-desktop.jpeg');
   background-size: cover;
   background-position: center center;
   background-repeat: no-repeat;
@@ -328,11 +328,11 @@ img {
 }
 
 .residential-bg {
-  background-image: url('../images/1280/11307056/WhatsAppImage2024-10-10at6.21.33AM.jpeg');
+  background-image: url('theme/residential-desktop.jpeg');
 }
 
 .commercial-bg {
-  background-image: url('../images/800/11307097/WhatsAppImage2024-10-10at6.29.53AM.jpeg');
+  background-image: url('theme/commercial-desktop.jpeg');
 }
 
 .section-overlay {
@@ -990,15 +990,15 @@ img {
   }
 
   .hero-bg {
-    background-image: url('../images/576/11327066/WhatsAppImage2024-10-11at7.48.15AM.jpeg');
+    background-image: url('theme/hero-mobile.jpeg');
   }
 
   .residential-bg {
-    background-image: url('../images/576/11307056/WhatsAppImage2024-10-10at6.21.33AM.jpeg');
+    background-image: url('theme/residential-mobile.jpeg');
   }
 
   .commercial-bg {
-    background-image: url('../images/576/11307097/WhatsAppImage2024-10-10at6.29.53AM.jpeg');
+    background-image: url('theme/commercial-mobile.jpeg');
   }
 
   .gallery-grid {
