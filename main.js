@@ -24,28 +24,51 @@
   var navToggle = document.getElementById('nav-toggle');
   var navLinks  = document.getElementById('nav-links');
 
-  navToggle.addEventListener('click', function () {
-    var open = navLinks.classList.toggle('open');
-    navToggle.classList.toggle('open', open);
-    navToggle.setAttribute('aria-expanded', String(open));
-  });
-
-  // Close nav when any link clicked
-  navLinks.querySelectorAll('a').forEach(function (a) {
-    a.addEventListener('click', function () {
-      navLinks.classList.remove('open');
-      navToggle.classList.remove('open');
-      navToggle.setAttribute('aria-expanded', 'false');
+  if (navToggle && navLinks) {
+    navToggle.addEventListener('click', function (e) {
+      e.stopPropagation();
+      var open = navLinks.classList.toggle('open');
+      navToggle.classList.toggle('open', open);
+      navToggle.setAttribute('aria-expanded', String(open));
+      document.body.classList.toggle('menu-open', open);
+      
+      // Debug logging
+      console.log('Menu toggled:', open ? 'OPEN' : 'CLOSED');
+      console.log('Classes:', navLinks.className);
     });
-  });
 
-  // Close nav on outside click
-  document.addEventListener('click', function (e) {
-    if (!header.contains(e.target)) {
-      navLinks.classList.remove('open');
-      navToggle.classList.remove('open');
-    }
-  });
+    // Close nav when any link clicked
+    navLinks.querySelectorAll('a').forEach(function (a) {
+      a.addEventListener('click', function () {
+        navLinks.classList.remove('open');
+        navToggle.classList.remove('open');
+        navToggle.setAttribute('aria-expanded', 'false');
+        document.body.classList.remove('menu-open');
+      });
+    });
+
+    // Close nav on outside click
+    document.addEventListener('click', function (e) {
+      if (!header.contains(e.target) && navLinks.classList.contains('open')) {
+        navLinks.classList.remove('open');
+        navToggle.classList.remove('open');
+        navToggle.setAttribute('aria-expanded', 'false');
+        document.body.classList.remove('menu-open');
+      }
+    });
+
+    // Close nav on escape key
+    document.addEventListener('keydown', function (e) {
+      if (e.key === 'Escape' && navLinks.classList.contains('open')) {
+        navLinks.classList.remove('open');
+        navToggle.classList.remove('open');
+        navToggle.setAttribute('aria-expanded', 'false');
+        document.body.classList.remove('menu-open');
+      }
+    });
+  } else {
+    console.error('Mobile menu elements not found!', {navToggle: navToggle, navLinks: navLinks});
+  }
 
   /* ============================================================
      SMOOTH SCROLL
