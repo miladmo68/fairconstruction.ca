@@ -3,22 +3,82 @@
 <head>
   <meta charset="UTF-8" />
   <meta name="viewport" content="width=device-width, initial-scale=1.0" />
-  <title>Fair Construction Services - Commercial and Restoration</title>
-  <meta name="description" content="Fair Construction Services - commercial and residential renovation, restoration, and construction in Mississauga, Ontario." />
+  <meta name="theme-color" content="#1a2332" />
+
+  <title>Fair Construction Services | Premium Renovation & Restoration in Mississauga</title>
+  <meta name="description" content="Fair Construction Services delivers premium residential and commercial renovation, restoration, and construction across Mississauga and the Greater Toronto Area. Licensed, insured, 15+ years experience." />
+  <meta name="keywords" content="construction Mississauga, renovation GTA, commercial restoration Ontario, basement finishing, kitchen renovation, water damage restoration" />
+  <meta name="author" content="Fair Construction Services" />
+  <link rel="canonical" href="https://fairconstruction.ca/" />
+
+  <!-- Open Graph -->
+  <meta property="og:type" content="website" />
+  <meta property="og:url" content="https://fairconstruction.ca/" />
+  <meta property="og:title" content="Fair Construction Services | Premium Renovation & Restoration" />
+  <meta property="og:description" content="Premium construction and restoration services for residential and commercial projects across the Greater Toronto Area." />
+  <meta property="og:image" content="https://fairconstruction.ca/theme/hero-desktop.jpeg" />
+  <meta property="og:locale" content="en_CA" />
+
+  <!-- Twitter -->
+  <meta name="twitter:card" content="summary_large_image" />
+  <meta name="twitter:title" content="Fair Construction Services" />
+  <meta name="twitter:description" content="Premium construction and restoration in Mississauga and the GTA." />
+  <meta name="twitter:image" content="https://fairconstruction.ca/theme/hero-desktop.jpeg" />
+
   <link rel="icon" type="image/png" href="img/favicon.png" sizes="32x32" />
+  <link rel="apple-touch-icon" href="img/favicon.png" />
+
+  <!-- Preload hero image -->
+  <link rel="preload" as="image" href="theme/hero-desktop.jpeg" media="(min-width: 769px)" />
+  <link rel="preload" as="image" href="theme/hero-mobile.jpeg"  media="(max-width: 768px)" />
+
+  <!-- Fonts -->
   <link rel="preconnect" href="https://fonts.googleapis.com" />
   <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin />
-  <link href="https://fonts.googleapis.com/css2?family=Playfair+Display:wght@700;800;900&family=Inter:wght@400;500;600;700;800&display=swap" rel="stylesheet" />
+  <link href="https://fonts.googleapis.com/css2?family=Manrope:wght@500;600;700;800&family=Inter:wght@400;500;600;700&display=swap" rel="stylesheet" />
+
+  <!-- AOS scroll-reveal -->
+  <link rel="stylesheet" href="https://unpkg.com/aos@2.3.4/dist/aos.css" />
+
   <link rel="stylesheet" href="styles.css" />
+
+  <!-- Schema.org LocalBusiness -->
+  <script type="application/ld+json">
+  {
+    "@context": "https://schema.org",
+    "@type": "GeneralContractor",
+    "name": "Fair Construction Services",
+    "image": "https://fairconstruction.ca/img/logo.png",
+    "url": "https://fairconstruction.ca/",
+    "telephone": "+1-437-230-1548",
+    "email": "info@fairconstruction.ca",
+    "priceRange": "$$",
+    "address": {
+      "@type": "PostalAddress",
+      "addressLocality": "Mississauga",
+      "addressRegion": "ON",
+      "addressCountry": "CA"
+    },
+    "areaServed": [
+      { "@type": "City", "name": "Mississauga" },
+      { "@type": "City", "name": "Toronto" },
+      { "@type": "City", "name": "Oakville" },
+      { "@type": "City", "name": "Brampton" },
+      { "@type": "AdministrativeArea", "name": "Greater Toronto Area" }
+    ],
+    "openingHours": "Mo-Su 00:00-23:59",
+    "sameAs": []
+  }
+  </script>
 </head>
 <body>
 
   <!-- ========== NAVIGATION ========== -->
   <header id="site-header">
-    <nav id="main-nav">
+    <nav id="main-nav" aria-label="Main">
       <div class="nav-inner">
         <div class="nav-logo">
-          <a href="#hero">
+          <a href="#hero" aria-label="Fair Construction Services — Home">
             <img src="img/logo.png" alt="Fair Construction Services" />
           </a>
         </div>
@@ -28,9 +88,10 @@
           <li><a href="#residential">Residential</a></li>
           <li><a href="#commercial">Commercial</a></li>
           <li><a href="#projects">Projects</a></li>
-          <li class="nav-last"><a href="#contact">Contact</a></li>
+          <li><a href="#testimonials">Reviews</a></li>
+          <li class="nav-cta"><a href="#estimate">Free Estimate</a></li>
         </ul>
-        <button class="nav-toggle" id="nav-toggle" aria-label="Toggle navigation">
+        <button class="nav-toggle" id="nav-toggle" type="button" aria-label="Toggle navigation menu" aria-expanded="false" aria-controls="nav-links">
           <span></span>
           <span></span>
           <span></span>
@@ -42,218 +103,224 @@
   <main>
 
     <!-- ========== HERO ========== -->
-    <section id="hero" class="hero-section">
-      <div class="hero-bg" id="hero-parallax-bg"></div>
-      <div class="hero-overlay"></div>
-      <div class="hero-content" id="hero-parallax-content">
-        <div class="hero-badge" style="display: inline-block; background: linear-gradient(135deg, rgba(212, 175, 55, 0.25) 0%, rgba(212, 175, 55, 0.15) 100%); backdrop-filter: blur(10px); padding: 0.6rem 1.8rem; border-radius: 50px; margin-bottom: 2rem; font-size: 0.95rem; color: white; font-weight: 600; opacity: 0; animation: heroFadeIn 0.8s ease forwards; animation-delay: 0.2s; border: 1px solid rgba(212, 175, 55, 0.3); letter-spacing: 0.5px;">
-          ⭐ Trusted by 500+ Clients in the GTA
+    <section id="hero" class="hero">
+      <div class="hero-bg" id="hero-parallax-bg" aria-hidden="true"></div>
+      <div class="hero-inner" id="hero-parallax-content">
+        <div class="hero-badge">
+          <span class="stars" aria-label="5 star rating">★ 4.9/5</span>
+          Trusted by 500+ Clients across the GTA
         </div>
-        <h1 class="hero-title hero-anim-title" style="font-family: 'Playfair Display', serif; font-size: 7rem; font-weight: 900; color: #fff; line-height: 1.05; margin-bottom: 2rem; letter-spacing: -0.04em; text-shadow: 0 6px 30px rgba(0,0,0,0.4);">Building Excellence,<br>Exceeding Expectations</h1>
-        <p style="color: rgba(255,255,255,0.95); font-size: 1.35rem; margin-bottom: 3rem; max-width: 800px; margin-left: auto; margin-right: auto; opacity: 0; animation: heroFadeIn 0.8s ease forwards; animation-delay: 0.8s; line-height: 1.7; font-weight: 400;">Premium construction and restoration services for residential and commercial projects across Mississauga and the Greater Toronto Area</p>
-        <div style="display: flex; gap: 1.25rem; justify-content: center; flex-wrap: wrap; opacity: 0; animation: heroFadeIn 0.8s ease forwards; animation-delay: 1.2s;">
-          <a href="#estimate" class="hero-btn" style="display: inline-flex; align-items: center; gap: 1rem; padding: 1.5rem 3.5rem; background: white; color: var(--primary); font-family: 'Inter', sans-serif; font-size: 1.15rem; font-weight: 700; border-radius: 50px; box-shadow: 0 32px 80px rgba(0,0,0,0.35); transition: var(--transition-smooth); text-decoration: none; position: relative; overflow: hidden;">Get Free Estimate</a>
-          <a href="#projects" class="hero-btn-secondary" style="display: inline-flex; align-items: center; gap: 0.75rem; padding: 1.5rem 3rem; background: rgba(255,255,255,0.15); backdrop-filter: blur(10px); color: white; font-family: 'Inter', sans-serif; font-size: 1.15rem; font-weight: 600; border-radius: 50px; border: 2px solid rgba(255,255,255,0.4); transition: var(--transition-smooth); text-decoration: none;">View Our Work</a>
+        <h1>Building Excellence,<br /><span class="accent">Exceeding Expectations</span></h1>
+        <p class="hero-sub">Premium construction, renovation, and restoration for residential and commercial projects across Mississauga and the Greater Toronto Area.</p>
+        <div class="hero-cta">
+          <a href="#estimate" class="btn btn-primary">Get a Free Estimate</a>
+          <a href="#projects" class="btn btn-ghost">View Our Work</a>
         </div>
       </div>
-      <a href="#about" class="hero-arrow" aria-label="Scroll down">
-        <svg xmlns="http://www.w3.org/2000/svg" viewBox="0 0 30 18" width="30" height="18">
-          <polyline points="0,0 15,16 30,0" fill="none" stroke="#fff" stroke-width="3"/>
-        </svg>
+      <a href="#about" class="hero-arrow" aria-label="Scroll to next section">
+        <svg xmlns="http://www.w3.org/2000/svg" viewBox="0 0 24 24" width="18" height="18" fill="none" stroke="currentColor" stroke-width="2.2" stroke-linecap="round" stroke-linejoin="round" aria-hidden="true"><polyline points="6 9 12 15 18 9"></polyline></svg>
       </a>
     </section>
 
-    <!-- ========== STATS BANNER ========== -->
-    <section class="stats-section" style="background: white; padding: 3rem 0; box-shadow: 0 4px 20px rgba(0,0,0,0.08);">
+    <!-- ========== STATS — overlapping floating card ========== -->
+    <section class="stats-wrap" aria-label="Company at a glance">
       <div class="container">
-        <div style="display: grid; grid-template-columns: repeat(auto-fit, minmax(200px, 1fr)); gap: 3rem; text-align: center;">
-          <div class="reveal">
-            <div style="font-size: 3.5rem; font-weight: 800; color: var(--primary); font-family: 'Playfair Display', serif; margin-bottom: 0.75rem;">15+</div>
-            <div style="color: var(--text-medium); font-size: 1.05rem; font-weight: 500;">Years Experience</div>
-          </div>
-          <div class="reveal reveal-stagger-2">
-            <div style="font-size: 3.5rem; font-weight: 800; color: var(--primary); font-family: 'Playfair Display', serif; margin-bottom: 0.75rem;">500+</div>
-            <div style="color: var(--text-medium); font-size: 1.05rem; font-weight: 500;">Projects Completed</div>
-          </div>
-          <div class="reveal reveal-stagger-3">
-            <div style="font-size: 3.5rem; font-weight: 800; color: var(--primary); font-family: 'Playfair Display', serif; margin-bottom: 0.75rem;">100%</div>
-            <div style="color: var(--text-medium); font-size: 1.05rem; font-weight: 500;">Client Satisfaction</div>
-          </div>
-          <div class="reveal">
-            <div style="font-size: 3.5rem; font-weight: 800; color: var(--primary); font-family: 'Playfair Display', serif; margin-bottom: 0.75rem;">24/7</div>
-            <div style="color: var(--text-medium); font-size: 1.05rem; font-weight: 500;">Emergency Service</div>
+        <div class="stats-card" data-aos="fade-up">
+          <div class="stats-card-eyebrow">Fair Construction in numbers</div>
+          <div class="stats-grid">
+            <div>
+              <div class="stat-num"><span class="count" data-count="15">0</span><span class="accent">+</span></div>
+              <div class="stat-label">Years Experience</div>
+            </div>
+            <div>
+              <div class="stat-num"><span class="count" data-count="500">0</span><span class="accent">+</span></div>
+              <div class="stat-label">Projects Completed</div>
+            </div>
+            <div>
+              <div class="stat-num"><span class="count" data-count="100">0</span><span class="accent">%</span></div>
+              <div class="stat-label">Client Satisfaction</div>
+            </div>
+            <div>
+              <div class="stat-num">24<span class="accent">/7</span></div>
+              <div class="stat-label">Emergency Service</div>
+            </div>
           </div>
         </div>
       </div>
     </section>
 
-    <!-- ========== ABOUT US ========== -->
-    <section id="about" class="about-section section-pad" style="background: linear-gradient(135deg, #ffffff 0%, #f8f9fa 100%);">
-      <div class="container about-inner">
-        <div class="about-text">
-          <h2>About Us</h2>
-          <div class="divider-space"></div>
-          <p><strong>Mission</strong></p>
-          <p>At Fair Construction, our mission is to deliver exceptional construction services that exceed expectations and stand the test of time. We are committed to maintaining the highest standards of quality, safety, and professionalism in every project we undertake. Whether it's a residential renovation, a commercial build, or a complex custom project, our team is here to provide innovative solutions and unmatched expertise.</p>
-          <br/>
-          <p><strong>Team</strong></p>
-          <p>Our team is comprised of skilled professionals who bring a wealth of knowledge and experience to the table. From our project managers and architects to our skilled tradespeople, everyone at Fair Construction is dedicated to ensuring that every detail is executed flawlessly. We believe in clear communication, transparency, and working collaboratively with our clients to achieve their goals.</p>
-        </div>
-        <div class="about-image">
-          <img src="img/about.jpeg" alt="Fair Construction - About Us" />
+    <!-- ========== ABOUT ========== -->
+    <section id="about" class="section">
+      <div class="container">
+        <div class="about-grid">
+          <div class="about-text" data-aos="fade-right">
+            <span class="eyebrow">About Fair Construction</span>
+            <h2>Built on craftsmanship, <span class="text-gradient">trust</span>, and lasting results.</h2>
+            <div class="divider"></div>
+            <p class="lead">Our mission is to deliver exceptional construction services that exceed expectations and stand the test of time — held to the highest standards of quality, safety, and professionalism on every project.</p>
+            <p>From residential renovations to commercial builds and complex restoration work, our skilled team of project managers, designers, and tradespeople bring decades of combined experience and an unwavering commitment to clear communication and transparent collaboration.</p>
+            <div class="about-meta">
+              <div class="about-meta-item">
+                <span class="k">Licensed</span>
+                <span class="v">Bonded &amp; Insured</span>
+              </div>
+              <div class="about-meta-item">
+                <span class="k">WSIB</span>
+                <span class="v">Fully Covered</span>
+              </div>
+            </div>
+          </div>
+          <div class="about-image" data-aos="fade-left">
+            <img src="img/about.jpeg" alt="Fair Construction project site" loading="lazy" width="800" height="600" />
+          </div>
         </div>
       </div>
     </section>
 
     <!-- ========== WHY CHOOSE US ========== -->
-    <section class="why-choose-section section-pad" style="background: linear-gradient(135deg, #f8f9fa 0%, #ffffff 100%); position: relative; overflow: hidden;">
-      <!-- Decorative background pattern -->
-      <div style="position: absolute; inset: 0; opacity: 0.03; background-image: url('data:image/svg+xml,%3Csvg width=\"60\" height=\"60\" viewBox=\"0 0 60 60\" xmlns=\"http://www.w3.org/2000/svg\"%3E%3Cg fill=\"none\" fill-rule=\"evenodd\"%3E%3Cg fill=\"%23c41e3a\" fill-opacity=\"1\"%3E%3Cpath d=\"M36 34v-4h-2v4h-4v2h4v4h2v-4h4v-2h-4zm0-30V0h-2v4h-4v2h4v4h2V6h4V4h-4zM6 34v-4H4v4H0v2h4v4h2v-4h4v-2H6zM6 4V0H4v4H0v2h4v4h2V6h4V4H6z\"/%3E%3C/g%3E%3C/g%3E%3C/svg%3E'); pointer-events: none;"></div>
-      <div class="container" style="position: relative; z-index: 1;">
-        <h2 style="text-align: center; color: var(--primary); margin-bottom: 1rem; font-family: 'Playfair Display', serif; font-size: 3.5rem; font-weight: 800;">Why Choose Fair Construction</h2>
-        <p style="text-align: center; color: var(--text-medium); font-size: 1.15rem; max-width: 750px; margin: 0 auto 4rem; line-height: 1.7;">We combine years of experience with modern techniques to deliver exceptional results that stand the test of time.</p>
-        <div style="display: grid; grid-template-columns: repeat(auto-fit, minmax(260px, 1fr)); gap: 2.5rem; max-width: 1200px; margin: 0 auto;">
-          <div class="reveal" style="text-align: center; padding: 2.5rem 2rem; background: white; border-radius: 16px; box-shadow: 0 8px 32px rgba(0,0,0,0.08); transition: var(--transition-smooth); border-top: 4px solid var(--gold);">
-            <div style="width: 80px; height: 80px; margin: 0 auto 1.75rem; background: linear-gradient(135deg, rgba(212, 175, 55, 0.15) 0%, rgba(196, 30, 58, 0.1) 100%); border-radius: 50%; display: flex; align-items: center; justify-content: center; box-shadow: 0 4px 16px rgba(212, 175, 55, 0.2);">
-              <svg xmlns="http://www.w3.org/2000/svg" viewBox="0 0 512 512" width="40" height="40" fill="#c41e3a">
-                <path d="M256 512A256 256 0 1 0 256 0a256 256 0 1 0 0 512zM369 209L241 337c-9.4 9.4-24.6 9.4-33.9 0l-64-64c-9.4-9.4-9.4-24.6 0-33.9s24.6-9.4 33.9 0l47 47L335 175c9.4-9.4 24.6-9.4 33.9 0s9.4 24.6 0 33.9z"/>
-              </svg>
+    <section class="section section-alt" aria-labelledby="why-heading">
+      <div class="container">
+        <div class="section-head" data-aos="fade-up">
+          <span class="eyebrow">Why Choose Us</span>
+          <h2 id="why-heading">Why clients trust Fair Construction</h2>
+          <div class="divider"></div>
+          <p>Years of experience, modern techniques, and a craftsman's eye for detail — every project, every time.</p>
+        </div>
+        <div class="feature-grid">
+          <div class="feature-card" data-aos="fade-up">
+            <div class="feature-icon">
+              <svg xmlns="http://www.w3.org/2000/svg" width="28" height="28" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2" stroke-linecap="round" stroke-linejoin="round" aria-hidden="true"><path d="M12 22s8-4 8-10V5l-8-3-8 3v7c0 6 8 10 8 10z"/><polyline points="9 12 11 14 15 10"/></svg>
             </div>
-            <h4 style="color: var(--primary); margin-bottom: 1rem; font-size: 1.35rem; font-family: 'Playfair Display', serif; font-weight: 700;">Licensed & Insured</h4>
-            <p style="color: var(--text-medium); font-size: 1rem; line-height: 1.7; margin: 0;">Fully licensed, bonded, and insured for your peace of mind and protection.</p>
+            <h4>Licensed &amp; Insured</h4>
+            <p>Fully licensed, bonded, and insured for your peace of mind on every project.</p>
           </div>
-          <div class="reveal reveal-stagger-2" style="text-align: center; padding: 2.5rem 2rem; background: white; border-radius: 16px; box-shadow: 0 8px 32px rgba(0,0,0,0.08); transition: var(--transition-smooth); border-top: 4px solid var(--gold);">
-            <div style="width: 80px; height: 80px; margin: 0 auto 1.75rem; background: linear-gradient(135deg, rgba(212, 175, 55, 0.15) 0%, rgba(196, 30, 58, 0.1) 100%); border-radius: 50%; display: flex; align-items: center; justify-content: center; box-shadow: 0 4px 16px rgba(212, 175, 55, 0.2);">
-              <svg xmlns="http://www.w3.org/2000/svg" viewBox="0 0 640 512" width="40" height="40" fill="#c41e3a">
-                <path d="M144 0a80 80 0 1 1 0 160A80 80 0 1 1 144 0zM512 0a80 80 0 1 1 0 160A80 80 0 1 1 512 0zM0 298.7C0 239.8 47.8 192 106.7 192h42.7c15.9 0 31 3.5 44.6 9.7c-1.3 7.2-1.9 14.7-1.9 22.3c0 38.2 16.8 72.5 43.3 96c-.2 0-.4 0-.7 0H21.3C9.6 320 0 310.4 0 298.7zM405.3 320c-.2 0-.4 0-.7 0c26.6-23.5 43.3-57.8 43.3-96c0-7.6-.7-15-1.9-22.3c13.6-6.3 28.7-9.7 44.6-9.7h42.7C592.2 192 640 239.8 640 298.7c0 11.8-9.6 21.3-21.3 21.3H405.3zM224 224a96 96 0 1 1 192 0 96 96 0 1 1 -192 0zM128 485.3C128 411.7 187.7 352 261.3 352H378.7C452.3 352 512 411.7 512 485.3c0 14.7-11.9 26.7-26.7 26.7H154.7c-14.7 0-26.7-11.9-26.7-26.7z"/>
-              </svg>
+          <div class="feature-card" data-aos="fade-up" data-aos-delay="80">
+            <div class="feature-icon">
+              <svg xmlns="http://www.w3.org/2000/svg" width="28" height="28" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2" stroke-linecap="round" stroke-linejoin="round" aria-hidden="true"><path d="M17 21v-2a4 4 0 0 0-4-4H5a4 4 0 0 0-4 4v2"/><circle cx="9" cy="7" r="4"/><path d="M23 21v-2a4 4 0 0 0-3-3.87"/><path d="M16 3.13a4 4 0 0 1 0 7.75"/></svg>
             </div>
-            <h4 style="color: var(--primary); margin-bottom: 1rem; font-size: 1.35rem; font-family: 'Playfair Display', serif; font-weight: 700;">Expert Team</h4>
-            <p style="color: var(--text-medium); font-size: 1rem; line-height: 1.7; margin: 0;">Skilled professionals with decades of combined construction experience.</p>
+            <h4>Expert Team</h4>
+            <p>Skilled professionals with decades of combined construction experience.</p>
           </div>
-          <div class="reveal reveal-stagger-3" style="text-align: center; padding: 2.5rem 2rem; background: white; border-radius: 16px; box-shadow: 0 8px 32px rgba(0,0,0,0.08); transition: var(--transition-smooth); border-top: 4px solid var(--gold);">
-            <div style="width: 80px; height: 80px; margin: 0 auto 1.75rem; background: linear-gradient(135deg, rgba(212, 175, 55, 0.15) 0%, rgba(196, 30, 58, 0.1) 100%); border-radius: 50%; display: flex; align-items: center; justify-content: center; box-shadow: 0 4px 16px rgba(212, 175, 55, 0.2);">
-              <svg xmlns="http://www.w3.org/2000/svg" viewBox="0 0 512 512" width="40" height="40" fill="#c41e3a">
-                <path d="M256 48a208 208 0 1 1 0 416 208 208 0 1 1 0-416zm0 464A256 256 0 1 0 256 0a256 256 0 1 0 0 512zM369 209c9.4-9.4 9.4-24.6 0-33.9s-24.6-9.4-33.9 0l-111 111-47-47c-9.4-9.4-24.6-9.4-33.9 0s-9.4 24.6 0 33.9l64 64c9.4 9.4 24.6 9.4 33.9 0L369 209z"/>
-              </svg>
+          <div class="feature-card" data-aos="fade-up" data-aos-delay="160">
+            <div class="feature-icon">
+              <svg xmlns="http://www.w3.org/2000/svg" width="28" height="28" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2" stroke-linecap="round" stroke-linejoin="round" aria-hidden="true"><polygon points="12 2 15.09 8.26 22 9.27 17 14.14 18.18 21.02 12 17.77 5.82 21.02 7 14.14 2 9.27 8.91 8.26 12 2"/></svg>
             </div>
-            <h4 style="color: var(--primary); margin-bottom: 1rem; font-size: 1.35rem; font-family: 'Playfair Display', serif; font-weight: 700;">Quality Guaranteed</h4>
-            <p style="color: var(--text-medium); font-size: 1rem; line-height: 1.7; margin: 0;">We stand behind our work with comprehensive warranties and guarantees.</p>
+            <h4>Quality Guaranteed</h4>
+            <p>We stand behind every project with comprehensive warranties and guarantees.</p>
           </div>
-          <div class="reveal" style="text-align: center; padding: 2.5rem 2rem; background: white; border-radius: 16px; box-shadow: 0 8px 32px rgba(0,0,0,0.08); transition: var(--transition-smooth); border-top: 4px solid var(--gold);">
-            <div style="width: 80px; height: 80px; margin: 0 auto 1.75rem; background: linear-gradient(135deg, rgba(212, 175, 55, 0.15) 0%, rgba(196, 30, 58, 0.1) 100%); border-radius: 50%; display: flex; align-items: center; justify-content: center; box-shadow: 0 4px 16px rgba(212, 175, 55, 0.2);">
-              <svg xmlns="http://www.w3.org/2000/svg" viewBox="0 0 512 512" width="40" height="40" fill="#c41e3a">
-                <path d="M256 0a256 256 0 1 1 0 512A256 256 0 1 1 256 0zM232 120V256c0 8 4 15.5 10.7 20l96 64c11 7.4 25.9 4.4 33.3-6.7s4.4-25.9-6.7-33.3L280 243.2V120c0-13.3-10.7-24-24-24s-24 10.7-24 24z"/>
-              </svg>
+          <div class="feature-card" data-aos="fade-up" data-aos-delay="240">
+            <div class="feature-icon">
+              <svg xmlns="http://www.w3.org/2000/svg" width="28" height="28" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2" stroke-linecap="round" stroke-linejoin="round" aria-hidden="true"><circle cx="12" cy="12" r="10"/><polyline points="12 6 12 12 16 14"/></svg>
             </div>
-            <h4 style="color: var(--primary); margin-bottom: 1rem; font-size: 1.35rem; font-family: 'Playfair Display', serif; font-weight: 700;">On-Time Delivery</h4>
-            <p style="color: var(--text-medium); font-size: 1rem; line-height: 1.7; margin: 0;">We respect your time and complete projects on schedule and within budget.</p>
+            <h4>On-Time Delivery</h4>
+            <p>We respect your time — projects completed on schedule and on budget.</p>
           </div>
         </div>
       </div>
     </section>
 
     <!-- ========== RESIDENTIAL SERVICES ========== -->
-    <section id="residential" class="residential-section">
-      <div class="section-bg-image residential-bg"></div>
-      <div class="section-overlay"></div>
-      <div class="container section-inner">
-        <h2 class="section-title">Residential Services</h2>
-        <div class="services-cards">
-          <div class="service-card">
-            <div class="service-card-icon">
-              <svg xmlns="http://www.w3.org/2000/svg" viewBox="0 0 576 512" width="48" height="48" fill="#d22b2b">
-                <path d="M575.8 255.5c0 18-15 32.1-32 32.1h-32l.7 160.2c.2 35.5-28.5 64.3-64 64.3H128.1c-35.3 0-64-28.7-64-64V287.6H32c-18 0-32-14-32-32.1c0-9 3-17 10-24L266.4 8c7-7.2 15-8 22-8s15 1 22 7L384 79V56c0-13.3 10.7-24 24-24h48c13.3 0 24 10.7 24 24V168l79.8 88c7 7 10 15 10 23.5zm-262 64.1l-56 56-56-56-32 32 88 88 88-88-32-32z"/>
-              </svg>
+    <section id="residential" class="services services-residential">
+      <div class="services-bg" aria-hidden="true"></div>
+      <div class="container">
+        <div class="section-head" data-aos="fade-up">
+          <span class="eyebrow">Residential</span>
+          <h2>Renovations that feel like home</h2>
+          <p>From kitchens and bathrooms to full home additions — beautiful, durable spaces built to your standard.</p>
+        </div>
+        <div class="service-cards">
+          <article class="service-card" data-aos="fade-up">
+            <div class="service-icon">
+              <svg xmlns="http://www.w3.org/2000/svg" width="26" height="26" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2" stroke-linecap="round" stroke-linejoin="round" aria-hidden="true"><path d="M3 12l2-2m0 0l7-7 7 7M5 10v10a1 1 0 0 0 1 1h3m10-11l2 2m-2-2v10a1 1 0 0 1-1 1h-3m-6 0a1 1 0 0 0 1-1v-4a1 1 0 0 1 1-1h2a1 1 0 0 1 1 1v4a1 1 0 0 0 1 1m-6 0h6"/></svg>
             </div>
-            <h4>Kitchen and Bathroom Upgrades</h4>
+            <h4>Kitchen &amp; Bathroom Upgrades</h4>
             <ul>
-              <li>Cabinets and Countertops</li>
-              <li>Appliances and Fixtures</li>
-              <li>Layout and Flooring</li>
+              <li>Cabinets and countertops</li>
+              <li>Appliances and fixtures</li>
+              <li>Layout, plumbing &amp; flooring</li>
             </ul>
-          </div>
-          <div class="service-card">
-            <div class="service-card-icon">
-              <svg xmlns="http://www.w3.org/2000/svg" viewBox="0 0 448 512" width="48" height="48" fill="#d22b2b">
-                <path d="M48 0C21.5 0 0 21.5 0 48V464c0 26.5 21.5 48 48 48h96V432c0-26.5 21.5-48 48-48s48 21.5 48 48v80h96c26.5 0 48-21.5 48-48V48c0-26.5-21.5-48-48-48H48zM64 240c0-8.8 7.2-16 16-16h32c8.8 0 16 7.2 16 16v32c0 8.8-7.2 16-16 16H80c-8.8 0-16-7.2-16-16V240zm112-16h32c8.8 0 16 7.2 16 16v32c0 8.8-7.2 16-16 16H176c-8.8 0-16-7.2-16-16V240c0-8.8 7.2-16 16-16zm80 16c0-8.8 7.2-16 16-16h32c8.8 0 16 7.2 16 16v32c0 8.8-7.2 16-16 16H272c-8.8 0-16-7.2-16-16V240zM80 96h32c8.8 0 16 7.2 16 16v32c0 8.8-7.2 16-16 16H80c-8.8 0-16-7.2-16-16V112c0-8.8 7.2-16 16-16zm80 16c0-8.8 7.2-16 16-16h32c8.8 0 16 7.2 16 16v32c0 8.8-7.2 16-16 16H176c-8.8 0-16-7.2-16-16V112zm112-16h32c8.8 0 16 7.2 16 16v32c0 8.8-7.2 16-16 16H272c-8.8 0-16-7.2-16-16V112c0-8.8 7.2-16 16-16z"/>
-              </svg>
+          </article>
+          <article class="service-card" data-aos="fade-up" data-aos-delay="80">
+            <div class="service-icon">
+              <svg xmlns="http://www.w3.org/2000/svg" width="26" height="26" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2" stroke-linecap="round" stroke-linejoin="round" aria-hidden="true"><rect x="3" y="3" width="18" height="18" rx="2"/><path d="M3 9h18M9 21V9"/></svg>
             </div>
             <h4>Full Basement Renovation</h4>
             <ul>
-              <li>Living Spaces</li>
-              <li>Insulation and Drywall</li>
-              <li>Lighting and Ventilation</li>
+              <li>Living spaces &amp; suites</li>
+              <li>Insulation and drywall</li>
+              <li>Lighting and ventilation</li>
             </ul>
-          </div>
-          <div class="service-card">
-            <div class="service-card-icon">
-              <svg xmlns="http://www.w3.org/2000/svg" viewBox="0 0 576 512" width="48" height="48" fill="#d22b2b">
-                <path d="M301.1 7.9C289-2.6 271-2.6 258.9 7.9l-256 224c-13.3 11.6-14.6 31.9-3 45.2s31.9 14.6 45.2 3L64 270.5V464c0 26.5 21.5 48 48 48H248V408c0-13.3 10.7-24 24-24s24 10.7 24 24v104H464c26.5 0 48-21.5 48-48V270.5l18.9 9.6c13.3 11.6 33.5 10.3 45.2-3s10.3-33.5-3-45.2l-256-224zM288 74.5l192 167.9V464H336V408c0-39.8-32.2-72-72-72s-72 32.2-72 72v56H128V242.4L288 74.5z"/>
-              </svg>
+          </article>
+          <article class="service-card" data-aos="fade-up" data-aos-delay="160">
+            <div class="service-icon">
+              <svg xmlns="http://www.w3.org/2000/svg" width="26" height="26" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2" stroke-linecap="round" stroke-linejoin="round" aria-hidden="true"><path d="M3 21h18M5 21V8l7-5 7 5v13M9 21v-6h6v6"/></svg>
             </div>
-            <h4>Home Additions and Energy Efficiency</h4>
+            <h4>Additions &amp; Energy Efficiency</h4>
             <ul>
-              <li>Room Extensions</li>
-              <li>Outdoor Spaces</li>
-              <li>Energy Upgrades</li>
+              <li>Room and second-story extensions</li>
+              <li>Outdoor spaces and decks</li>
+              <li>Windows, insulation, HVAC upgrades</li>
             </ul>
-          </div>
+          </article>
         </div>
       </div>
     </section>
 
-    <!-- Residential Services Detail List -->
-    <section class="services-detail-section section-pad">
+    <!-- Residential detail -->
+    <section class="section">
       <div class="container">
-        <h3 class="detail-heading">Residential Renovation Services</h3>
-        <div class="services-detail-grid">
-          <div class="services-detail-col">
+        <div class="section-head" data-aos="fade-up">
+          <span class="eyebrow">Full Service Catalog</span>
+          <h2>Residential renovation services</h2>
+          <div class="divider"></div>
+        </div>
+        <div class="detail">
+          <div class="detail-col" data-aos="fade-up">
             <h5>Kitchen Renovations</h5>
             <ul>
-              <li>Cabinet &amp; Countertop Upgrades</li>
-              <li>Appliance Installation</li>
-              <li>Layout Changes</li>
+              <li>Cabinet &amp; countertop upgrades</li>
+              <li>Appliance installation</li>
+              <li>Layout changes</li>
             </ul>
             <h5>Bathroom Renovations</h5>
             <ul>
-              <li>Vanity &amp; Fixture Updates</li>
-              <li>Shower &amp; Bathtub Upgrades</li>
-              <li>Plumbing &amp; Lighting</li>
+              <li>Vanity &amp; fixture updates</li>
+              <li>Shower &amp; bathtub upgrades</li>
+              <li>Plumbing &amp; lighting</li>
             </ul>
             <h5>Basement Finishing</h5>
             <ul>
-              <li>Living Space Conversion</li>
-              <li>Insulation &amp; Drywall Installation</li>
-              <li>Lighting &amp; Ventilation</li>
+              <li>Living-space conversion</li>
+              <li>Insulation &amp; drywall</li>
+              <li>Lighting &amp; ventilation</li>
             </ul>
           </div>
-          <div class="services-detail-col">
+          <div class="detail-col" data-aos="fade-up" data-aos-delay="80">
             <h5>Home Additions</h5>
             <ul>
-              <li>Room Extensions</li>
-              <li>Second Story Additions</li>
-              <li>Outdoor Spaces</li>
+              <li>Room extensions</li>
+              <li>Second-story additions</li>
+              <li>Outdoor living spaces</li>
             </ul>
             <h5>Interior &amp; Exterior Painting</h5>
             <ul>
-              <li>Wall &amp; Ceiling Painting</li>
-              <li>Trim &amp; Molding Refinishing</li>
-              <li>Exterior Painting</li>
+              <li>Wall &amp; ceiling painting</li>
+              <li>Trim &amp; molding refinishing</li>
+              <li>Exterior painting</li>
             </ul>
             <h5>Flooring Upgrades</h5>
             <ul>
-              <li>New Flooring Installation</li>
-              <li>Refinishing Existing Floors</li>
-              <li>Carpet or Tile Installation</li>
+              <li>New flooring installation</li>
+              <li>Refinishing existing floors</li>
+              <li>Carpet or tile installation</li>
             </ul>
           </div>
-          <div class="services-detail-col">
-            <h5>Energy Efficiency Improvements</h5>
+          <div class="detail-col" data-aos="fade-up" data-aos-delay="160">
+            <h5>Energy Efficiency</h5>
             <ul>
-              <li>Windows &amp; Doors Upgrades</li>
-              <li>Insulation Improvements</li>
-              <li>HVAC System Upgrades</li>
+              <li>Windows &amp; doors upgrades</li>
+              <li>Insulation improvements</li>
+              <li>HVAC system upgrades</li>
             </ul>
           </div>
         </div>
@@ -261,273 +328,356 @@
     </section>
 
     <!-- ========== COMMERCIAL SERVICES ========== -->
-    <section id="commercial" class="commercial-section">
-      <div class="section-bg-image commercial-bg"></div>
-      <div class="section-overlay"></div>
-      <div class="container section-inner">
-        <h2 class="section-title">Commercial Services</h2>
-        <div class="services-cards">
-          <div class="service-card">
-            <div class="service-card-icon">
-              <svg xmlns="http://www.w3.org/2000/svg" viewBox="0 0 512 512" width="48" height="48" fill="#d22b2b">
-                <path d="M0 32C0 14.3 14.3 0 32 0H480c17.7 0 32 14.3 32 32s-14.3 32-32 32V448c17.7 0 32 14.3 32 32s-14.3 32-32 32H304V432c0-26.5-21.5-48-48-48s-48 21.5-48 48v80H32c-17.7 0-32-14.3-32-32s14.3-32 32-32V64C14.3 64 0 49.7 0 32zm96 80v32c0 8.8 7.2 16 16 16h32c8.8 0 16-7.2 16-16V112c0-8.8-7.2-16-16-16H112c-8.8 0-16 7.2-16 16zm144-16H208c-8.8 0-16 7.2-16 16v32c0 8.8 7.2 16 16 16h32c8.8 0 16-7.2 16-16V112c0-8.8-7.2-16-16-16zm80 16v32c0 8.8 7.2 16 16 16h32c8.8 0 16-7.2 16-16V112c0-8.8-7.2-16-16-16H336c-8.8 0-16 7.2-16 16zM96 240v32c0 8.8 7.2 16 16 16h32c8.8 0 16-7.2 16-16V240c0-8.8-7.2-16-16-16H112c-8.8 0-16 7.2-16 16zm144-16H208c-8.8 0-16 7.2-16 16v32c0 8.8 7.2 16 16 16h32c8.8 0 16-7.2 16-16V240c0-8.8-7.2-16-16-16zm80 16v32c0 8.8 7.2 16 16 16h32c8.8 0 16-7.2 16-16V240c0-8.8-7.2-16-16-16H336c-8.8 0-16 7.2-16 16z"/>
-              </svg>
+    <section id="commercial" class="services services-commercial">
+      <div class="services-bg" aria-hidden="true"></div>
+      <div class="container">
+        <div class="section-head" data-aos="fade-up">
+          <span class="eyebrow">Commercial</span>
+          <h2>Reliable commercial construction &amp; restoration</h2>
+          <p>Property care, build-outs, and emergency restoration — minimum disruption, maximum quality.</p>
+        </div>
+        <div class="service-cards">
+          <article class="service-card" data-aos="fade-up">
+            <div class="service-icon">
+              <svg xmlns="http://www.w3.org/2000/svg" width="26" height="26" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2" stroke-linecap="round" stroke-linejoin="round" aria-hidden="true"><rect x="3" y="3" width="18" height="18" rx="2"/><path d="M9 9h.01M15 9h.01M9 15h.01M15 15h.01"/></svg>
             </div>
             <h4>Property Care</h4>
             <ul>
               <li>Cleaning services</li>
-              <li>HVAC repairs</li>
-              <li>Energy checks</li>
+              <li>HVAC maintenance &amp; repairs</li>
+              <li>Energy efficiency assessments</li>
             </ul>
-          </div>
-          <div class="service-card">
-            <div class="service-card-icon">
-              <svg xmlns="http://www.w3.org/2000/svg" viewBox="0 0 512 512" width="48" height="48" fill="#d22b2b">
-                <path d="M88 0C74.7 0 64 10.7 64 24c0 38.9 23.4 59.4 39.1 73.1l1.1 1C120.5 112.3 128 119.9 128 136c0 13.3 10.7 24 24 24s24-10.7 24-24c0-38.9-23.4-59.4-39.1-73.1l-1.1-1C119.5 47.7 112 40.1 112 24c0-13.3-10.7-24-24-24zM208 24c0-13.3-10.7-24-24-24s-24 10.7-24 24c0 38.9 23.4 59.4 39.1 73.1l1.1 1C216.5 112.3 224 119.9 224 136c0 13.3 10.7 24 24 24s24-10.7 24-24c0-38.9-23.4-59.4-39.1-73.1l-1.1-1C215.5 47.7 208 40.1 208 24zM96 224c-17.7 0-32 14.3-32 32v192c0 35.3 28.7 64 64 64H288c35.3 0 64-28.7 64-64V256c0-17.7-14.3-32-32-32H96z"/>
-              </svg>
+          </article>
+          <article class="service-card" data-aos="fade-up" data-aos-delay="80">
+            <div class="service-icon">
+              <svg xmlns="http://www.w3.org/2000/svg" width="26" height="26" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2" stroke-linecap="round" stroke-linejoin="round" aria-hidden="true"><path d="M12 19l7-7 3 3-7 7-3-3z"/><path d="M18 13l-1.5-7.5L2 2l3.5 14.5L13 18l5-5z"/><path d="M2 2l7.586 7.586"/><circle cx="11" cy="11" r="2"/></svg>
             </div>
-            <h4>Interior/Exterior Upgrades</h4>
+            <h4>Interior &amp; Exterior Upgrades</h4>
             <ul>
               <li>Space planning</li>
-              <li>Painting services</li>
-              <li>Flooring installs</li>
+              <li>Painting and finishes</li>
+              <li>Flooring installations</li>
             </ul>
-          </div>
-          <div class="service-card">
-            <div class="service-card-icon">
-              <svg xmlns="http://www.w3.org/2000/svg" viewBox="0 0 512 512" width="48" height="48" fill="#d22b2b">
-                <path d="M152.1 38.2c9.9 8.9 10.7 24 1.8 33.9l-72 80c-4.4 4.9-10.6 7.8-17.2 7.9s-12.9-2.4-17.6-7L7 113C-2.3 103.6-2.3 88.4 7 79s24.6-9.4 33.9 0l22.1 22.1 55.1-61.2c8.9-9.9 24-10.7 33.9-1.8zm0 160c9.9 8.9 10.7 24 1.8 33.9l-72 80c-4.4 4.9-10.6 7.8-17.2 7.9s-12.9-2.4-17.6-7L7 273c-9.4-9.4-9.4-24.6 0-33.9s24.6-9.4 33.9 0l22.1 22.1 55.1-61.2c8.9-9.9 24-10.7 33.9-1.8zM224 96c0-17.7 14.3-32 32-32H480c17.7 0 32 14.3 32 32s-14.3 32-32 32H256c-17.7 0-32-14.3-32-32zm0 160c0-17.7 14.3-32 32-32H480c17.7 0 32 14.3 32 32s-14.3 32-32 32H256c-17.7 0-32-14.3-32-32zM160 416c0-17.7 14.3-32 32-32H480c17.7 0 32 14.3 32 32s-14.3 32-32 32H192c-17.7 0-32-14.3-32-32zM48 368a48 48 0 1 1 0 96 48 48 0 1 1 0-96z"/>
-              </svg>
+          </article>
+          <article class="service-card" data-aos="fade-up" data-aos-delay="160">
+            <div class="service-icon">
+              <svg xmlns="http://www.w3.org/2000/svg" width="26" height="26" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2" stroke-linecap="round" stroke-linejoin="round" aria-hidden="true"><path d="M14 2H6a2 2 0 0 0-2 2v16a2 2 0 0 0 2 2h12a2 2 0 0 0 2-2V8z"/><polyline points="14 2 14 8 20 8"/><path d="M9 13l2 2 4-4"/></svg>
             </div>
             <h4>Restoration &amp; Repairs</h4>
             <ul>
-              <li>Water damage fix</li>
-              <li>Roof repairs</li>
-              <li>Mold removal</li>
+              <li>Water and storm damage</li>
+              <li>Roof and structural repairs</li>
+              <li>Mold remediation</li>
             </ul>
-          </div>
+          </article>
         </div>
       </div>
     </section>
 
-    <!-- Commercial Services Detail List -->
-    <section class="services-detail-section section-pad">
+    <!-- Commercial detail -->
+    <section class="section section-alt">
       <div class="container">
-        <h3 class="detail-heading">Commercial Services</h3>
-        <div class="services-detail-grid commercial-detail-grid">
-          <div class="services-detail-col">
-            <h5>Space planning and layout optimization</h5>
+        <div class="section-head" data-aos="fade-up">
+          <span class="eyebrow">Full Service Catalog</span>
+          <h2>Commercial services</h2>
+          <div class="divider"></div>
+        </div>
+        <div class="detail">
+          <div class="detail-col" data-aos="fade-up">
+            <h5>Space Planning &amp; Layout</h5>
             <ul>
               <li>Interior design and aesthetics</li>
-              <li>Facility Maintenance</li>
+              <li>Facility maintenance</li>
             </ul>
-            <h5>Regular upkeep and cleaning services</h5>
+            <h5>Upkeep &amp; Cleaning</h5>
             <ul>
               <li>HVAC maintenance and repair</li>
-              <li>Building Management</li>
+              <li>Building management</li>
             </ul>
-            <h5>Property management services</h5>
+            <h5>Property Management</h5>
             <ul>
               <li>Energy efficiency assessments</li>
             </ul>
           </div>
-          <div class="services-detail-col">
+          <div class="detail-col" data-aos="fade-up" data-aos-delay="80">
             <h5>Commercial Painting</h5>
             <ul>
               <li>Interior and exterior painting</li>
               <li>Specialty coatings and finishes</li>
             </ul>
-            <h5>Flooring Installation and Maintenance</h5>
+            <h5>Flooring</h5>
             <ul>
-              <li>Carpet, tile, and hardwood flooring services</li>
+              <li>Carpet, tile, and hardwood services</li>
               <li>Routine floor care and refinishing</li>
             </ul>
-            <h5>Landscaping and Exterior Services</h5>
+            <h5>Landscaping &amp; Exterior</h5>
             <ul>
               <li>Landscape design and maintenance</li>
-              <li>Parking lot maintenance and repair</li>
+              <li>Parking lot maintenance &amp; repair</li>
             </ul>
           </div>
-          <div class="services-detail-col">
-            <h5>Electrical and Plumbing Services</h5>
+          <div class="detail-col" data-aos="fade-up" data-aos-delay="160">
+            <h5>Electrical &amp; Plumbing</h5>
             <ul>
               <li>Electrical installations and repairs</li>
-              <li>Plumbing maintenance and emergency services</li>
-              <li>Restoration Services</li>
+              <li>Plumbing &amp; emergency services</li>
             </ul>
             <h5>Water Damage Restoration</h5>
             <ul>
               <li>Emergency water extraction</li>
-              <li>Structural drying and dehumidification</li>
+              <li>Structural drying &amp; dehumidification</li>
             </ul>
-            <h5>Fire and Smoke Damage Restoration</h5>
+            <h5>Fire &amp; Smoke Damage</h5>
             <ul>
-              <li>Comprehensive cleanup and debris removal</li>
-              <li>Smoke odor removal and soot cleaning</li>
+              <li>Cleanup &amp; debris removal</li>
+              <li>Smoke odor &amp; soot cleaning</li>
             </ul>
           </div>
-          <div class="services-detail-col">
+          <div class="detail-col" data-aos="fade-up" data-aos-delay="240">
             <h5>Mold Remediation</h5>
             <ul>
-              <li>Mold inspection and assessment</li>
-              <li>Safe mold removal and prevention strategies</li>
+              <li>Mold inspection &amp; assessment</li>
+              <li>Safe removal &amp; prevention</li>
             </ul>
             <h5>Storm Damage Repair</h5>
             <ul>
               <li>Roof and siding repairs</li>
-              <li>Debris cleanup and property restoration</li>
+              <li>Debris cleanup &amp; restoration</li>
             </ul>
           </div>
         </div>
       </div>
     </section>
 
-    <!-- ========== PREVIOUS WORK / PROJECTS ========== -->
-    <section id="projects" class="projects-section section-pad">
+    <!-- ========== PROJECTS / BENTO GALLERY ========== -->
+    <section id="projects" class="section">
       <div class="container">
-        <h2 class="section-heading-dark">Previous Work</h2>
+        <div class="section-head" data-aos="fade-up">
+          <span class="eyebrow">Our Work</span>
+          <h2>Recent projects</h2>
+          <div class="divider"></div>
+          <p>A selection of recent residential and commercial projects from across the GTA.</p>
+        </div>
         <div class="gallery-grid" id="gallery-grid">
           <div class="gallery-item" data-full="img/gallery/01-full.jpeg" data-caption="">
-            <img src="img/gallery/01-thumb.jpeg" alt="Previous work" loading="lazy" />
-            <div class="gallery-hover-overlay"><span class="gallery-zoom-icon">&#x2b;</span></div>
+            <img src="img/gallery/01-thumb.jpeg" alt="Fair Construction project" loading="lazy" />
+            <div class="gallery-overlay"><span class="zoom" aria-hidden="true">+</span></div>
           </div>
           <div class="gallery-item" data-full="img/gallery/02-full.jpeg" data-caption="">
-            <img src="img/gallery/02-thumb.jpeg" alt="Previous work" loading="lazy" />
-            <div class="gallery-hover-overlay"><span class="gallery-zoom-icon">&#x2b;</span></div>
+            <img src="img/gallery/02-thumb.jpeg" alt="Fair Construction project" loading="lazy" />
+            <div class="gallery-overlay"><span class="zoom" aria-hidden="true">+</span></div>
           </div>
           <div class="gallery-item" data-full="img/gallery/03-full.jpeg" data-caption="">
-            <img src="img/gallery/03-thumb.jpeg" alt="Previous work" loading="lazy" />
-            <div class="gallery-hover-overlay"><span class="gallery-zoom-icon">&#x2b;</span></div>
+            <img src="img/gallery/03-thumb.jpeg" alt="Fair Construction project" loading="lazy" />
+            <div class="gallery-overlay"><span class="zoom" aria-hidden="true">+</span></div>
           </div>
           <div class="gallery-item" data-full="img/gallery/04-full.jpeg" data-caption="">
-            <img src="img/gallery/04-thumb.jpeg" alt="Previous work" loading="lazy" />
-            <div class="gallery-hover-overlay"><span class="gallery-zoom-icon">&#x2b;</span></div>
+            <img src="img/gallery/04-thumb.jpeg" alt="Fair Construction project" loading="lazy" />
+            <div class="gallery-overlay"><span class="zoom" aria-hidden="true">+</span></div>
           </div>
           <div class="gallery-item" data-full="img/gallery/05-full.jpeg" data-caption="">
-            <img src="img/gallery/05-thumb.jpeg" alt="Previous work" loading="lazy" />
-            <div class="gallery-hover-overlay"><span class="gallery-zoom-icon">&#x2b;</span></div>
+            <img src="img/gallery/05-thumb.jpeg" alt="Fair Construction project" loading="lazy" />
+            <div class="gallery-overlay"><span class="zoom" aria-hidden="true">+</span></div>
           </div>
           <div class="gallery-item" data-full="img/gallery/06-full.jpeg" data-caption="">
-            <img src="img/gallery/06-thumb.jpeg" alt="Previous work" loading="lazy" />
-            <div class="gallery-hover-overlay"><span class="gallery-zoom-icon">&#x2b;</span></div>
+            <img src="img/gallery/06-thumb.jpeg" alt="Fair Construction project" loading="lazy" />
+            <div class="gallery-overlay"><span class="zoom" aria-hidden="true">+</span></div>
           </div>
           <div class="gallery-item" data-full="img/gallery/07-full.jpeg" data-caption="">
-            <img src="img/gallery/07-thumb.jpeg" alt="Previous work" loading="lazy" />
-            <div class="gallery-hover-overlay"><span class="gallery-zoom-icon">&#x2b;</span></div>
+            <img src="img/gallery/07-thumb.jpeg" alt="Fair Construction project" loading="lazy" />
+            <div class="gallery-overlay"><span class="zoom" aria-hidden="true">+</span></div>
           </div>
           <div class="gallery-item" data-full="img/gallery/08-full.jpeg" data-caption="">
-            <img src="img/gallery/08-thumb.jpeg" alt="Previous work" loading="lazy" />
-            <div class="gallery-hover-overlay"><span class="gallery-zoom-icon">&#x2b;</span></div>
+            <img src="img/gallery/08-thumb.jpeg" alt="Fair Construction project" loading="lazy" />
+            <div class="gallery-overlay"><span class="zoom" aria-hidden="true">+</span></div>
           </div>
           <div class="gallery-item" data-full="img/gallery/09-full.jpeg" data-caption="">
-            <img src="img/gallery/09-thumb.jpeg" alt="Previous work" loading="lazy" />
-            <div class="gallery-hover-overlay"><span class="gallery-zoom-icon">&#x2b;</span></div>
+            <img src="img/gallery/09-thumb.jpeg" alt="Fair Construction project" loading="lazy" />
+            <div class="gallery-overlay"><span class="zoom" aria-hidden="true">+</span></div>
           </div>
-          <div class="gallery-item" data-full="img/gallery/10-full.jpeg" data-caption="5260 Solar Dr Mississauga, ON">
-            <img src="img/gallery/10-thumb.jpeg" alt="5260 Solar Dr Mississauga, ON" loading="lazy" />
-            <div class="gallery-hover-overlay"><span class="gallery-zoom-icon">&#x2b;</span></div>
-            <div class="gallery-caption">5260 Solar Dr Mississauga, ON</div>
+          <div class="gallery-item" data-full="img/gallery/10-full.jpeg" data-caption="5260 Solar Dr, Mississauga, ON">
+            <img src="img/gallery/10-thumb.jpeg" alt="5260 Solar Dr, Mississauga, ON" loading="lazy" />
+            <div class="gallery-overlay">
+              <span class="zoom" aria-hidden="true">+</span>
+              <span class="cap">5260 Solar Dr, Mississauga, ON</span>
+            </div>
           </div>
           <div class="gallery-item" data-full="img/gallery/11-full.jpeg" data-caption="3485 Rebecca Street, Oakville, ON">
             <img src="img/gallery/11-thumb.jpeg" alt="3485 Rebecca Street, Oakville, ON" loading="lazy" />
-            <div class="gallery-hover-overlay"><span class="gallery-zoom-icon">&#x2b;</span></div>
-            <div class="gallery-caption">3485 Rebecca Street, Oakville, ON</div>
+            <div class="gallery-overlay">
+              <span class="zoom" aria-hidden="true">+</span>
+              <span class="cap">3485 Rebecca St, Oakville, ON</span>
+            </div>
           </div>
-          <div class="gallery-item" data-full="img/gallery/12-full.jpeg" data-caption="ODC - 71 King St. - Ontario Diagnostic Centers">
-            <img src="img/gallery/12-thumb.jpeg" alt="ODC - 71 King St." loading="lazy" />
-            <div class="gallery-hover-overlay"><span class="gallery-zoom-icon">&#x2b;</span></div>
-            <div class="gallery-caption">ODC - 71 King St.</div>
+          <div class="gallery-item" data-full="img/gallery/12-full.jpeg" data-caption="ODC — 71 King St., Ontario Diagnostic Centers">
+            <img src="img/gallery/12-thumb.jpeg" alt="ODC — 71 King St" loading="lazy" />
+            <div class="gallery-overlay">
+              <span class="zoom" aria-hidden="true">+</span>
+              <span class="cap">ODC — 71 King St</span>
+            </div>
           </div>
-          <div class="gallery-item" data-full="img/gallery/13-full.jpeg" data-caption="Scan, cut and choring the concrete">
-            <img src="img/gallery/13-thumb.jpeg" alt="Scan, cut and choring the concrete" loading="lazy" />
-            <div class="gallery-hover-overlay"><span class="gallery-zoom-icon">&#x2b;</span></div>
-            <div class="gallery-caption">Scan, cut and choring the concrete</div>
+          <div class="gallery-item" data-full="img/gallery/13-full.jpeg" data-caption="Concrete scanning, cutting and coring">
+            <img src="img/gallery/13-thumb.jpeg" alt="Concrete scanning, cutting and coring" loading="lazy" />
+            <div class="gallery-overlay">
+              <span class="zoom" aria-hidden="true">+</span>
+              <span class="cap">Scan, cut &amp; core concrete</span>
+            </div>
           </div>
           <div class="gallery-item" data-full="img/gallery/14-full.jpeg" data-caption="Bayview Middle School">
             <img src="img/gallery/14-thumb.jpeg" alt="Bayview Middle School" loading="lazy" />
-            <div class="gallery-hover-overlay"><span class="gallery-zoom-icon">&#x2b;</span></div>
-            <div class="gallery-caption">Bayview Middle School</div>
+            <div class="gallery-overlay">
+              <span class="zoom" aria-hidden="true">+</span>
+              <span class="cap">Bayview Middle School</span>
+            </div>
           </div>
           <div class="gallery-item" data-full="img/gallery/15-full.jpeg" data-caption="Winchester Public School, Old Wing">
             <img src="img/gallery/15-thumb.jpeg" alt="Winchester Public School, Old Wing" loading="lazy" />
-            <div class="gallery-hover-overlay"><span class="gallery-zoom-icon">&#x2b;</span></div>
-            <div class="gallery-caption">Winchester Public School, Old Wing</div>
+            <div class="gallery-overlay">
+              <span class="zoom" aria-hidden="true">+</span>
+              <span class="cap">Winchester Public School</span>
+            </div>
           </div>
           <div class="gallery-item" data-full="img/gallery/16-full.jpeg" data-caption="">
-            <img src="img/gallery/16-thumb.jpeg" alt="Previous work" loading="lazy" />
-            <div class="gallery-hover-overlay"><span class="gallery-zoom-icon">&#x2b;</span></div>
+            <img src="img/gallery/16-thumb.jpeg" alt="Fair Construction project" loading="lazy" />
+            <div class="gallery-overlay"><span class="zoom" aria-hidden="true">+</span></div>
           </div>
           <div class="gallery-item" data-full="img/gallery/17-full.jpeg" data-caption="">
-            <img src="img/gallery/17-thumb.jpeg" alt="Previous work" loading="lazy" />
-            <div class="gallery-hover-overlay"><span class="gallery-zoom-icon">&#x2b;</span></div>
+            <img src="img/gallery/17-thumb.jpeg" alt="Fair Construction project" loading="lazy" />
+            <div class="gallery-overlay"><span class="zoom" aria-hidden="true">+</span></div>
           </div>
           <div class="gallery-item" data-full="img/gallery/18-full.jpeg" data-caption="">
-            <img src="img/gallery/18-thumb.jpeg" alt="Previous work" loading="lazy" />
-            <div class="gallery-hover-overlay"><span class="gallery-zoom-icon">&#x2b;</span></div>
+            <img src="img/gallery/18-thumb.jpeg" alt="Fair Construction project" loading="lazy" />
+            <div class="gallery-overlay"><span class="zoom" aria-hidden="true">+</span></div>
           </div>
         </div>
-
       </div>
     </section>
 
-    <!-- ========== OUR PROCESS ========== -->
-    <section class="process-section section-pad" style="background: linear-gradient(135deg, #ffffff 0%, #f8f9fa 100%);">
+    <!-- ========== PROCESS ========== -->
+    <section class="section section-alt" aria-labelledby="process-heading">
       <div class="container">
-        <div style="text-align: center; max-width: 850px; margin: 0 auto 4.5rem;">
-          <h2 style="color: var(--primary); margin-bottom: 1.25rem; font-family: 'Playfair Display', serif; font-size: 3.5rem; font-weight: 800;">Our Process</h2>
-          <p style="color: var(--text-medium); font-size: 1.15rem; line-height: 1.7;">From initial consultation to final walkthrough, we ensure a smooth and transparent construction experience</p>
+        <div class="section-head" data-aos="fade-up">
+          <span class="eyebrow">How We Work</span>
+          <h2 id="process-heading">A clear, transparent process</h2>
+          <div class="divider"></div>
+          <p>From the first conversation to the final walkthrough, you stay informed at every step.</p>
         </div>
-        <div style="display: grid; grid-template-columns: repeat(auto-fit, minmax(250px, 1fr)); gap: 2.5rem; position: relative;">
-          <div class="reveal" style="text-align: center; padding: 3rem 2.5rem; background: white; border-radius: 20px; box-shadow: 0 8px 32px rgba(0,0,0,0.08); transition: var(--transition-smooth); position: relative; border-top: 4px solid transparent; background-clip: padding-box;">
-            <div style="width: 70px; height: 70px; margin: 0 auto 1.75rem; background: linear-gradient(135deg, var(--gold) 0%, var(--primary) 100%); border-radius: 50%; display: flex; align-items: center; justify-content: center; color: white; font-size: 1.75rem; font-weight: 800; font-family: 'Playfair Display', serif; box-shadow: 0 4px 16px rgba(212, 175, 55, 0.3);">1</div>
-            <h4 style="color: var(--primary); margin-bottom: 1.25rem; font-size: 1.5rem; font-family: 'Playfair Display', serif; font-weight: 700;">Consultation</h4>
-            <p style="color: var(--text-medium); font-size: 1rem; line-height: 1.7; margin: 0;">We meet with you to understand your vision, requirements, and budget for the project.</p>
+        <div class="process-grid">
+          <div class="process-step" data-aos="fade-up">
+            <div class="process-num">1</div>
+            <h4>Consultation</h4>
+            <p>We meet with you to understand your vision, requirements, and budget.</p>
           </div>
-          <div class="reveal reveal-stagger-2" style="text-align: center; padding: 3rem 2.5rem; background: white; border-radius: 20px; box-shadow: 0 8px 32px rgba(0,0,0,0.08); transition: var(--transition-smooth);">
-            <div style="width: 70px; height: 70px; margin: 0 auto 1.75rem; background: linear-gradient(135deg, var(--gold) 0%, var(--primary) 100%); border-radius: 50%; display: flex; align-items: center; justify-content: center; color: white; font-size: 1.75rem; font-weight: 800; font-family: 'Playfair Display', serif; box-shadow: 0 4px 16px rgba(212, 175, 55, 0.3);">2</div>
-            <h4 style="color: var(--primary); margin-bottom: 1.25rem; font-size: 1.5rem; font-family: 'Playfair Display', serif; font-weight: 700;">Planning & Design</h4>
-            <p style="color: var(--text-medium); font-size: 1rem; line-height: 1.7; margin: 0;">Our team creates detailed plans and designs tailored to your specific needs and preferences.</p>
+          <div class="process-step" data-aos="fade-up" data-aos-delay="80">
+            <div class="process-num">2</div>
+            <h4>Planning &amp; Design</h4>
+            <p>We create detailed plans and designs tailored to your needs and preferences.</p>
           </div>
-          <div class="reveal reveal-stagger-3" style="text-align: center; padding: 3rem 2.5rem; background: white; border-radius: 20px; box-shadow: 0 8px 32px rgba(0,0,0,0.08); transition: var(--transition-smooth);">
-            <div style="width: 70px; height: 70px; margin: 0 auto 1.75rem; background: linear-gradient(135deg, var(--gold) 0%, var(--primary) 100%); border-radius: 50%; display: flex; align-items: center; justify-content: center; color: white; font-size: 1.75rem; font-weight: 800; font-family: 'Playfair Display', serif; box-shadow: 0 4px 16px rgba(212, 175, 55, 0.3);">3</div>
-            <h4 style="color: var(--primary); margin-bottom: 1.25rem; font-size: 1.5rem; font-family: 'Playfair Display', serif; font-weight: 700;">Construction</h4>
-            <p style="color: var(--text-medium); font-size: 1rem; line-height: 1.7; margin: 0;">Expert craftsmen bring your project to life with precision and attention to detail.</p>
+          <div class="process-step" data-aos="fade-up" data-aos-delay="160">
+            <div class="process-num">3</div>
+            <h4>Construction</h4>
+            <p>Expert craftsmen bring your project to life with precision and attention to detail.</p>
           </div>
-          <div class="reveal" style="text-align: center; padding: 3rem 2.5rem; background: white; border-radius: 20px; box-shadow: 0 8px 32px rgba(0,0,0,0.08); transition: var(--transition-smooth);">
-            <div style="width: 70px; height: 70px; margin: 0 auto 1.75rem; background: linear-gradient(135deg, var(--gold) 0%, var(--primary) 100%); border-radius: 50%; display: flex; align-items: center; justify-content: center; color: white; font-size: 1.75rem; font-weight: 800; font-family: 'Playfair Display', serif; box-shadow: 0 4px 16px rgba(212, 175, 55, 0.3);">4</div>
-            <h4 style="color: var(--primary); margin-bottom: 1.25rem; font-size: 1.5rem; font-family: 'Playfair Display', serif; font-weight: 700;">Final Inspection</h4>
-            <p style="color: var(--text-medium); font-size: 1rem; line-height: 1.7; margin: 0;">We conduct a thorough walkthrough to ensure everything meets our high standards and your expectations.</p>
+          <div class="process-step" data-aos="fade-up" data-aos-delay="240">
+            <div class="process-num">4</div>
+            <h4>Final Inspection</h4>
+            <p>A thorough walkthrough to make sure everything meets our standards and yours.</p>
           </div>
         </div>
       </div>
     </section>
 
-    <!-- ========== CTA SECTION ========== -->
-    <section class="cta-section" style="background: var(--gradient-primary); padding: 6rem 0; position: relative; overflow: hidden;">
-      <div style="position: absolute; inset: 0; background: url('data:image/svg+xml,%3Csvg width=\"60\" height=\"60\" viewBox=\"0 0 60 60\" xmlns=\"http://www.w3.org/2000/svg\"%3E%3Cg fill=\"none\" fill-rule=\"evenodd\"%3E%3Cg fill=\"%23ffffff\" fill-opacity=\"0.05\"%3E%3Cpath d=\"M36 34v-4h-2v4h-4v2h4v4h2v-4h4v-2h-4zm0-30V0h-2v4h-4v2h4v4h2V6h4V4h-4zM6 34v-4H4v4H0v2h4v4h2v-4h4v-2H6zM6 4V0H4v4H0v2h4v4h2V6h4V4H6z\"/%3E%3C/g%3E%3C/g%3E%3C/svg%3E'); opacity: 0.3;"></div>
-      <div class="container" style="position: relative; z-index: 1; text-align: center;">
-        <h2 style="color: white; font-size: 3.5rem; margin-bottom: 1.5rem; font-family: 'Playfair Display', serif; font-weight: 800;">Ready to Start Your Project?</h2>
-        <p style="color: rgba(255,255,255,0.95); font-size: 1.25rem; max-width: 750px; margin: 0 auto 3rem; line-height: 1.7;">Get a free, no-obligation estimate for your construction or renovation project today</p>
-        <div style="display: flex; gap: 1.5rem; justify-content: center; flex-wrap: wrap;">
-          <a href="#estimate" style="display: inline-flex; align-items: center; gap: 0.75rem; padding: 1.5rem 3.5rem; background: white; color: var(--primary); font-family: 'Inter', sans-serif; font-size: 1.15rem; font-weight: 700; border-radius: 50px; box-shadow: 0 16px 48px rgba(0,0,0,0.3); transition: var(--transition-smooth); text-decoration: none;">Request Free Estimate</a>
-          <a href="tel:+14372301548" style="display: inline-flex; align-items: center; gap: 0.75rem; padding: 1.5rem 3.5rem; background: rgba(255,255,255,0.15); backdrop-filter: blur(10px); color: white; font-family: 'Inter', sans-serif; font-size: 1.15rem; font-weight: 600; border-radius: 50px; border: 2px solid rgba(255,255,255,0.4); transition: var(--transition-smooth); text-decoration: none;">📞 Call Us Now</a>
+    <!-- ========== TESTIMONIALS ========== -->
+    <section id="testimonials" class="section testimonials" aria-labelledby="reviews-heading">
+      <div class="container">
+        <div class="section-head" data-aos="fade-up">
+          <span class="eyebrow">Client Reviews</span>
+          <h2 id="reviews-heading">What our clients say</h2>
+          <div class="divider"></div>
+          <p>Real feedback from homeowners and businesses across the GTA. <em>Replace these placeholders with your actual reviews.</em></p>
+        </div>
+        <div class="testimonial-grid">
+          <article class="testimonial" data-aos="fade-up">
+            <div class="testimonial-stars" aria-label="5 out of 5 stars">★★★★★</div>
+            <p class="testimonial-quote">From the initial consultation to the final walkthrough, the Fair Construction team was professional, communicative, and meticulous. Our basement renovation came in on time and on budget — couldn't recommend them more.</p>
+            <div class="testimonial-author">
+              <div class="testimonial-avatar" aria-hidden="true">SM</div>
+              <div class="testimonial-meta">
+                <div class="name">Sarah M.</div>
+                <div class="role">Homeowner · Mississauga</div>
+              </div>
+            </div>
+          </article>
+          <article class="testimonial" data-aos="fade-up" data-aos-delay="80">
+            <div class="testimonial-stars" aria-label="5 out of 5 stars">★★★★★</div>
+            <p class="testimonial-quote">We hired Fair Construction for an emergency water-damage restoration at our office. They were on-site within hours, kept us updated daily, and finished the work quickly. Genuinely a 24/7 operation.</p>
+            <div class="testimonial-author">
+              <div class="testimonial-avatar" aria-hidden="true">DK</div>
+              <div class="testimonial-meta">
+                <div class="name">David K.</div>
+                <div class="role">Property Manager · Oakville</div>
+              </div>
+            </div>
+          </article>
+          <article class="testimonial" data-aos="fade-up" data-aos-delay="160">
+            <div class="testimonial-stars" aria-label="5 out of 5 stars">★★★★★</div>
+            <p class="testimonial-quote">Our kitchen reno turned out beautifully. The team was respectful of our home, cleaned up every day, and delivered exactly the design we wanted. We're already planning the next project with them.</p>
+            <div class="testimonial-author">
+              <div class="testimonial-avatar" aria-hidden="true">JR</div>
+              <div class="testimonial-meta">
+                <div class="name">Jennifer R.</div>
+                <div class="role">Homeowner · Toronto</div>
+              </div>
+            </div>
+          </article>
+        </div>
+      </div>
+    </section>
+
+    <!-- ========== CTA ========== -->
+    <section class="cta">
+      <div class="container">
+        <div class="cta-inner">
+          <h2 data-aos="fade-up">Ready to start your project?</h2>
+          <p data-aos="fade-up" data-aos-delay="60">Get a free, no-obligation estimate for your construction or renovation project today.</p>
+          <div class="cta-actions" data-aos="fade-up" data-aos-delay="120">
+            <a href="#estimate" class="btn btn-primary">Request Free Estimate</a>
+            <a href="tel:+14372301548" class="btn btn-ghost">
+              <svg xmlns="http://www.w3.org/2000/svg" width="18" height="18" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2" stroke-linecap="round" stroke-linejoin="round" aria-hidden="true"><path d="M22 16.92v3a2 2 0 0 1-2.18 2 19.79 19.79 0 0 1-8.63-3.07 19.5 19.5 0 0 1-6-6 19.79 19.79 0 0 1-3.07-8.67A2 2 0 0 1 4.11 2h3a2 2 0 0 1 2 1.72 12.84 12.84 0 0 0 .7 2.81 2 2 0 0 1-.45 2.11L8.09 9.91a16 16 0 0 0 6 6l1.27-1.27a2 2 0 0 1 2.11-.45 12.84 12.84 0 0 0 2.81.7A2 2 0 0 1 22 16.92z"/></svg>
+              Call (437) 230-1548
+            </a>
+          </div>
         </div>
       </div>
     </section>
 
     <!-- ========== CONTACT ========== -->
-    <section id="contact" class="contact-section section-pad">
+    <section id="contact" class="section">
       <div class="container">
-        <div class="contact-boxes">
-          <div class="contact-box">
+        <div class="section-head" data-aos="fade-up">
+          <span class="eyebrow">Get in Touch</span>
+          <h2>Contact us</h2>
+          <div class="divider"></div>
+        </div>
+        <div class="contact-grid">
+          <div class="contact-card" data-aos="fade-up">
+            <div class="icon">
+              <svg xmlns="http://www.w3.org/2000/svg" width="22" height="22" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2" stroke-linecap="round" stroke-linejoin="round" aria-hidden="true"><path d="M21 10c0 7-9 13-9 13s-9-6-9-13a9 9 0 0 1 18 0z"/><circle cx="12" cy="10" r="3"/></svg>
+            </div>
             <h3>Address</h3>
-            <p>Mississauga Ontario</p>
+            <p>Mississauga, Ontario<br />Greater Toronto Area</p>
           </div>
-          <div class="contact-box">
+          <div class="contact-card" data-aos="fade-up" data-aos-delay="80">
+            <div class="icon">
+              <svg xmlns="http://www.w3.org/2000/svg" width="22" height="22" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2" stroke-linecap="round" stroke-linejoin="round" aria-hidden="true"><path d="M22 16.92v3a2 2 0 0 1-2.18 2 19.79 19.79 0 0 1-8.63-3.07 19.5 19.5 0 0 1-6-6 19.79 19.79 0 0 1-3.07-8.67A2 2 0 0 1 4.11 2h3a2 2 0 0 1 2 1.72 12.84 12.84 0 0 0 .7 2.81 2 2 0 0 1-.45 2.11L8.09 9.91a16 16 0 0 0 6 6l1.27-1.27a2 2 0 0 1 2.11-.45 12.84 12.84 0 0 0 2.81.7A2 2 0 0 1 22 16.92z"/></svg>
+            </div>
             <h3>Phone</h3>
-            <p>+1 (437) 230-1548</p>
+            <p><a href="tel:+14372301548">+1 (437) 230-1548</a></p>
           </div>
-          <div class="contact-box">
+          <div class="contact-card" data-aos="fade-up" data-aos-delay="160">
+            <div class="icon">
+              <svg xmlns="http://www.w3.org/2000/svg" width="22" height="22" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2" stroke-linecap="round" stroke-linejoin="round" aria-hidden="true"><path d="M4 4h16c1.1 0 2 .9 2 2v12c0 1.1-.9 2-2 2H4c-1.1 0-2-.9-2-2V6c0-1.1.9-2 2-2z"/><polyline points="22 6 12 13 2 6"/></svg>
+            </div>
             <h3>Email</h3>
             <p><a href="mailto:info@fairconstruction.ca">info@fairconstruction.ca</a></p>
           </div>
@@ -535,46 +685,51 @@
       </div>
     </section>
 
-    <!-- ========== FREE ESTIMATE FORM ========== -->
-    <section id="estimate" class="estimate-section section-pad">
+    <!-- ========== ESTIMATE FORM ========== -->
+    <section id="estimate" class="section section-alt">
       <div class="container">
-        <h2 class="section-heading-dark">Free Estimate</h2>
-        <div class="form-wrapper">
+        <div class="section-head" data-aos="fade-up">
+          <span class="eyebrow">Free Estimate</span>
+          <h2>Tell us about your project</h2>
+          <div class="divider"></div>
+          <p>We'll get back to you within one business day.</p>
+        </div>
+        <div class="form-wrap" data-aos="fade-up" data-aos-delay="60">
           <form id="estimate-form" novalidate>
             <div class="form-row">
-              <div class="form-field">
-                <input type="text" name="company" id="field-company" placeholder="Company" autocomplete="organization" />
+              <div class="form-field" id="field-company-wrap">
+                <input type="text" name="company" id="field-company" placeholder="Company (optional)" autocomplete="organization" />
                 <span class="field-error" id="err-company"></span>
               </div>
-              <div class="form-field">
-                <input type="text" name="name" id="field-name" placeholder="Name" autocomplete="name" />
+              <div class="form-field" id="field-name-wrap">
+                <input type="text" name="name" id="field-name" placeholder="Your name" autocomplete="name" />
                 <span class="field-error" id="err-name"></span>
               </div>
             </div>
             <div class="form-row">
-              <div class="form-field">
-                <input type="tel" name="phone" id="field-phone" placeholder="Phone" required autocomplete="tel" />
+              <div class="form-field" id="field-phone-wrap">
+                <input type="tel" name="phone" id="field-phone" placeholder="Phone *" required autocomplete="tel" />
                 <span class="field-error" id="err-phone"></span>
               </div>
-              <div class="form-field">
-                <input type="email" name="email" id="field-email" placeholder="Email" required autocomplete="email" />
+              <div class="form-field" id="field-email-wrap">
+                <input type="email" name="email" id="field-email" placeholder="Email *" required autocomplete="email" />
                 <span class="field-error" id="err-email"></span>
               </div>
             </div>
             <div class="form-row form-row-full">
-              <div class="form-field">
-                <textarea name="message" id="field-message" placeholder="Message" rows="5"></textarea>
+              <div class="form-field" id="field-message-wrap">
+                <textarea name="message" id="field-message" placeholder="Tell us about your project..." rows="5"></textarea>
                 <span class="field-error" id="err-message"></span>
               </div>
             </div>
             <div class="form-actions">
-              <button type="submit" id="submit-btn" class="submit-btn">Submit</button>
+              <button type="submit" id="submit-btn" class="submit-btn">Send Request</button>
             </div>
-            <div id="form-success" class="form-success" style="display:none;">
-              Thank you! Your request has been received. We will contact you shortly.
+            <div id="form-success" class="form-success" hidden>
+              Thank you! Your request has been received. We'll contact you shortly.
             </div>
-            <div id="form-error" class="form-error-msg" style="display:none;">
-              Something went wrong. Please try again or contact us directly at info@fairconstruction.ca
+            <div id="form-error" class="form-error-msg" hidden>
+              Something went wrong. Please try again or email us at info@fairconstruction.ca
             </div>
           </form>
         </div>
@@ -585,128 +740,188 @@
 
   <!-- ========== FOOTER ========== -->
   <footer class="site-footer">
-    <div class="container" style="padding: 4rem 2rem 2rem;">
-      <div style="display: grid; grid-template-columns: repeat(auto-fit, minmax(250px, 1fr)); gap: 3rem; margin-bottom: 3rem;">
-        <div>
-          <img src="img/logo.png" alt="Fair Construction Services" style="height: 50px; margin-bottom: 1.5rem; filter: brightness(0) invert(1);" />
-          <p style="color: rgba(255,255,255,0.7); font-size: 0.95rem; line-height: 1.7; margin-bottom: 1.5rem;">Premium construction and restoration services for residential and commercial projects across the Greater Toronto Area.</p>
-          <div style="display: flex; gap: 1rem;">
-            <a href="#" style="width: 40px; height: 40px; background: rgba(255,255,255,0.1); border-radius: 50%; display: flex; align-items: center; justify-content: center; color: white; transition: var(--transition-fast);" aria-label="Facebook">
-              <svg xmlns="http://www.w3.org/2000/svg" width="20" height="20" viewBox="0 0 24 24" fill="currentColor"><path d="M24 12.073c0-6.627-5.373-12-12-12s-12 5.373-12 12c0 5.99 4.388 10.954 10.125 11.854v-8.385H7.078v-3.47h3.047V9.43c0-3.007 1.792-4.669 4.533-4.669 1.312 0 2.686.235 2.686.235v2.953H15.83c-1.491 0-1.956.925-1.956 1.874v2.25h3.328l-.532 3.47h-2.796v8.385C19.612 23.027 24 18.062 24 12.073z"/></svg>
+    <div class="container">
+      <div class="footer-grid">
+        <div class="footer-brand">
+          <img src="img/logo.png" alt="Fair Construction Services" />
+          <p>Premium construction and restoration services for residential and commercial projects across the Greater Toronto Area.</p>
+          <div class="footer-socials">
+            <a href="#" aria-label="Facebook">
+              <svg xmlns="http://www.w3.org/2000/svg" width="18" height="18" viewBox="0 0 24 24" fill="currentColor" aria-hidden="true"><path d="M24 12.073c0-6.627-5.373-12-12-12s-12 5.373-12 12c0 5.99 4.388 10.954 10.125 11.854v-8.385H7.078v-3.47h3.047V9.43c0-3.007 1.792-4.669 4.533-4.669 1.312 0 2.686.235 2.686.235v2.953H15.83c-1.491 0-1.956.925-1.956 1.874v2.25h3.328l-.532 3.47h-2.796v8.385C19.612 23.027 24 18.062 24 12.073z"/></svg>
             </a>
-            <a href="#" style="width: 40px; height: 40px; background: rgba(255,255,255,0.1); border-radius: 50%; display: flex; align-items: center; justify-content: center; color: white; transition: var(--transition-fast);" aria-label="Instagram">
-              <svg xmlns="http://www.w3.org/2000/svg" width="20" height="20" viewBox="0 0 24 24" fill="currentColor"><path d="M12 2.163c3.204 0 3.584.012 4.85.07 3.252.148 4.771 1.691 4.919 4.919.058 1.265.069 1.645.069 4.849 0 3.205-.012 3.584-.069 4.849-.149 3.225-1.664 4.771-4.919 4.919-1.266.058-1.644.07-4.85.07-3.204 0-3.584-.012-4.849-.07-3.26-.149-4.771-1.699-4.919-4.92-.058-1.265-.07-1.644-.07-4.849 0-3.204.013-3.583.07-4.849.149-3.227 1.664-4.771 4.919-4.919 1.266-.057 1.645-.069 4.849-.069zm0-2.163c-3.259 0-3.667.014-4.947.072-4.358.2-6.78 2.618-6.98 6.98-.059 1.281-.073 1.689-.073 4.948 0 3.259.014 3.668.072 4.948.2 4.358 2.618 6.78 6.98 6.98 1.281.058 1.689.072 4.948.072 3.259 0 3.668-.014 4.948-.072 4.354-.2 6.782-2.618 6.979-6.98.059-1.28.073-1.689.073-4.948 0-3.259-.014-3.667-.072-4.947-.196-4.354-2.617-6.78-6.979-6.98-1.281-.059-1.69-.073-4.949-.073zm0 5.838c-3.403 0-6.162 2.759-6.162 6.162s2.759 6.163 6.162 6.163 6.162-2.759 6.162-6.163c0-3.403-2.759-6.162-6.162-6.162zm0 10.162c-2.209 0-4-1.79-4-4 0-2.209 1.791-4 4-4s4 1.791 4 4c0 2.21-1.791 4-4 4zm6.406-11.845c-.796 0-1.441.645-1.441 1.44s.645 1.44 1.441 1.44c.795 0 1.439-.645 1.439-1.44s-.644-1.44-1.439-1.44z"/></svg>
+            <a href="#" aria-label="Instagram">
+              <svg xmlns="http://www.w3.org/2000/svg" width="18" height="18" viewBox="0 0 24 24" fill="currentColor" aria-hidden="true"><path d="M12 2.163c3.204 0 3.584.012 4.85.07 3.252.148 4.771 1.691 4.919 4.919.058 1.265.069 1.645.069 4.849 0 3.205-.012 3.584-.069 4.849-.149 3.225-1.664 4.771-4.919 4.919-1.266.058-1.644.07-4.85.07-3.204 0-3.584-.012-4.849-.07-3.26-.149-4.771-1.699-4.919-4.92-.058-1.265-.07-1.644-.07-4.849 0-3.204.013-3.583.07-4.849.149-3.227 1.664-4.771 4.919-4.919 1.266-.057 1.645-.069 4.849-.069zm0-2.163c-3.259 0-3.667.014-4.947.072-4.358.2-6.78 2.618-6.98 6.98-.059 1.281-.073 1.689-.073 4.948 0 3.259.014 3.668.072 4.948.2 4.358 2.618 6.78 6.98 6.98 1.281.058 1.689.072 4.948.072 3.259 0 3.668-.014 4.948-.072 4.354-.2 6.782-2.618 6.979-6.98.059-1.28.073-1.689.073-4.948 0-3.259-.014-3.667-.072-4.947-.196-4.354-2.617-6.78-6.979-6.98-1.281-.059-1.69-.073-4.949-.073zm0 5.838c-3.403 0-6.162 2.759-6.162 6.162s2.759 6.163 6.162 6.163 6.162-2.759 6.162-6.163c0-3.403-2.759-6.162-6.162-6.162zm0 10.162c-2.209 0-4-1.79-4-4 0-2.209 1.791-4 4-4s4 1.791 4 4c0 2.21-1.791 4-4 4zm6.406-11.845c-.796 0-1.441.645-1.441 1.44s.645 1.44 1.441 1.44c.795 0 1.439-.645 1.439-1.44s-.644-1.44-1.439-1.44z"/></svg>
             </a>
-            <a href="#" style="width: 40px; height: 40px; background: rgba(255,255,255,0.1); border-radius: 50%; display: flex; align-items: center; justify-content: center; color: white; transition: var(--transition-fast);" aria-label="LinkedIn">
-              <svg xmlns="http://www.w3.org/2000/svg" width="20" height="20" viewBox="0 0 24 24" fill="currentColor"><path d="M19 0h-14c-2.761 0-5 2.239-5 5v14c0 2.761 2.239 5 5 5h14c2.762 0 5-2.239 5-5v-14c0-2.761-2.238-5-5-5zm-11 19h-3v-11h3v11zm-1.5-12.268c-.966 0-1.75-.79-1.75-1.764s.784-1.764 1.75-1.764 1.75.79 1.75 1.764-.783 1.764-1.75 1.764zm13.5 12.268h-3v-5.604c0-3.368-4-3.113-4 0v5.604h-3v-11h3v1.765c1.396-2.586 7-2.777 7 2.476v6.759z"/></svg>
+            <a href="#" aria-label="LinkedIn">
+              <svg xmlns="http://www.w3.org/2000/svg" width="18" height="18" viewBox="0 0 24 24" fill="currentColor" aria-hidden="true"><path d="M19 0h-14c-2.761 0-5 2.239-5 5v14c0 2.761 2.239 5 5 5h14c2.762 0 5-2.239 5-5v-14c0-2.761-2.238-5-5-5zm-11 19h-3v-11h3v11zm-1.5-12.268c-.966 0-1.75-.79-1.75-1.764s.784-1.764 1.75-1.764 1.75.79 1.75 1.764-.783 1.764-1.75 1.764zm13.5 12.268h-3v-5.604c0-3.368-4-3.113-4 0v5.604h-3v-11h3v1.765c1.396-2.586 7-2.777 7 2.476v6.759z"/></svg>
             </a>
           </div>
         </div>
-        <div>
-          <h4 style="color: white; font-size: 1.1rem; margin-bottom: 1.5rem; font-weight: 600;">Quick Links</h4>
-          <ul style="list-style: none; padding: 0; margin: 0;">
-            <li style="margin-bottom: 0.75rem;"><a href="#about" style="color: rgba(255,255,255,0.7); font-size: 0.95rem; transition: var(--transition-fast);">About Us</a></li>
-            <li style="margin-bottom: 0.75rem;"><a href="#residential" style="color: rgba(255,255,255,0.7); font-size: 0.95rem; transition: var(--transition-fast);">Residential Services</a></li>
-            <li style="margin-bottom: 0.75rem;"><a href="#commercial" style="color: rgba(255,255,255,0.7); font-size: 0.95rem; transition: var(--transition-fast);">Commercial Services</a></li>
-            <li style="margin-bottom: 0.75rem;"><a href="#projects" style="color: rgba(255,255,255,0.7); font-size: 0.95rem; transition: var(--transition-fast);">Our Projects</a></li>
-            <li style="margin-bottom: 0.75rem;"><a href="#estimate" style="color: rgba(255,255,255,0.7); font-size: 0.95rem; transition: var(--transition-fast);">Get Estimate</a></li>
+        <div class="footer-col">
+          <h4>Quick Links</h4>
+          <ul>
+            <li><a href="#about">About Us</a></li>
+            <li><a href="#residential">Residential</a></li>
+            <li><a href="#commercial">Commercial</a></li>
+            <li><a href="#projects">Projects</a></li>
+            <li><a href="#testimonials">Reviews</a></li>
+            <li><a href="#estimate">Free Estimate</a></li>
           </ul>
         </div>
-        <div>
-          <h4 style="color: white; font-size: 1.1rem; margin-bottom: 1.5rem; font-weight: 600;">Services</h4>
-          <ul style="list-style: none; padding: 0; margin: 0;">
-            <li style="margin-bottom: 0.75rem;"><a href="#residential" style="color: rgba(255,255,255,0.7); font-size: 0.95rem; transition: var(--transition-fast);">Kitchen Renovations</a></li>
-            <li style="margin-bottom: 0.75rem;"><a href="#residential" style="color: rgba(255,255,255,0.7); font-size: 0.95rem; transition: var(--transition-fast);">Bathroom Remodeling</a></li>
-            <li style="margin-bottom: 0.75rem;"><a href="#residential" style="color: rgba(255,255,255,0.7); font-size: 0.95rem; transition: var(--transition-fast);">Basement Finishing</a></li>
-            <li style="margin-bottom: 0.75rem;"><a href="#commercial" style="color: rgba(255,255,255,0.7); font-size: 0.95rem; transition: var(--transition-fast);">Commercial Build-Outs</a></li>
-            <li style="margin-bottom: 0.75rem;"><a href="#commercial" style="color: rgba(255,255,255,0.7); font-size: 0.95rem; transition: var(--transition-fast);">Restoration Services</a></li>
+        <div class="footer-col">
+          <h4>Services</h4>
+          <ul>
+            <li><a href="#residential">Kitchen Renovations</a></li>
+            <li><a href="#residential">Bathroom Remodeling</a></li>
+            <li><a href="#residential">Basement Finishing</a></li>
+            <li><a href="#commercial">Commercial Build-Outs</a></li>
+            <li><a href="#commercial">Restoration Services</a></li>
           </ul>
         </div>
-        <div>
-          <h4 style="color: white; font-size: 1.1rem; margin-bottom: 1.5rem; font-weight: 600;">Contact Info</h4>
-          <ul style="list-style: none; padding: 0; margin: 0;">
-            <li style="margin-bottom: 1rem; display: flex; gap: 0.75rem; align-items: flex-start;">
-              <svg xmlns="http://www.w3.org/2000/svg" width="20" height="20" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2" stroke-linecap="round" stroke-linejoin="round" style="color: var(--primary); flex-shrink: 0; margin-top: 2px;"><path d="M21 10c0 7-9 13-9 13s-9-6-9-13a9 9 0 0 1 18 0z"></path><circle cx="12" cy="10" r="3"></circle></svg>
-              <span style="color: rgba(255,255,255,0.7); font-size: 0.95rem;">Mississauga, Ontario<br/>Greater Toronto Area</span>
+        <div class="footer-col">
+          <h4>Contact</h4>
+          <ul>
+            <li class="ic-li">
+              <svg xmlns="http://www.w3.org/2000/svg" width="16" height="16" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2" stroke-linecap="round" stroke-linejoin="round" aria-hidden="true"><path d="M21 10c0 7-9 13-9 13s-9-6-9-13a9 9 0 0 1 18 0z"/><circle cx="12" cy="10" r="3"/></svg>
+              <span>Mississauga, Ontario<br />Greater Toronto Area</span>
             </li>
-            <li style="margin-bottom: 1rem; display: flex; gap: 0.75rem; align-items: center;">
-              <svg xmlns="http://www.w3.org/2000/svg" width="20" height="20" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2" stroke-linecap="round" stroke-linejoin="round" style="color: var(--primary); flex-shrink: 0;"><path d="M22 16.92v3a2 2 0 0 1-2.18 2 19.79 19.79 0 0 1-8.63-3.07 19.5 19.5 0 0 1-6-6 19.79 19.79 0 0 1-3.07-8.67A2 2 0 0 1 4.11 2h3a2 2 0 0 1 2 1.72 12.84 12.84 0 0 0 .7 2.81 2 2 0 0 1-.45 2.11L8.09 9.91a16 16 0 0 0 6 6l1.27-1.27a2 2 0 0 1 2.11-.45 12.84 12.84 0 0 0 2.81.7A2 2 0 0 1 22 16.92z"></path></svg>
-              <a href="tel:+14372301548" style="color: rgba(255,255,255,0.7); font-size: 0.95rem; transition: var(--transition-fast);">+1 (437) 230-1548</a>
+            <li class="ic-li">
+              <svg xmlns="http://www.w3.org/2000/svg" width="16" height="16" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2" stroke-linecap="round" stroke-linejoin="round" aria-hidden="true"><path d="M22 16.92v3a2 2 0 0 1-2.18 2 19.79 19.79 0 0 1-8.63-3.07 19.5 19.5 0 0 1-6-6 19.79 19.79 0 0 1-3.07-8.67A2 2 0 0 1 4.11 2h3a2 2 0 0 1 2 1.72 12.84 12.84 0 0 0 .7 2.81 2 2 0 0 1-.45 2.11L8.09 9.91a16 16 0 0 0 6 6l1.27-1.27a2 2 0 0 1 2.11-.45 12.84 12.84 0 0 0 2.81.7A2 2 0 0 1 22 16.92z"/></svg>
+              <a href="tel:+14372301548">+1 (437) 230-1548</a>
             </li>
-            <li style="margin-bottom: 1rem; display: flex; gap: 0.75rem; align-items: center;">
-              <svg xmlns="http://www.w3.org/2000/svg" width="20" height="20" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2" stroke-linecap="round" stroke-linejoin="round" style="color: var(--primary); flex-shrink: 0;"><path d="M4 4h16c1.1 0 2 .9 2 2v12c0 1.1-.9 2-2 2H4c-1.1 0-2-.9-2-2V6c0-1.1.9-2 2-2z"></path><polyline points="22,6 12,13 2,6"></polyline></svg>
-              <a href="mailto:info@fairconstruction.ca" style="color: rgba(255,255,255,0.7); font-size: 0.95rem; transition: var(--transition-fast);">info@fairconstruction.ca</a>
+            <li class="ic-li">
+              <svg xmlns="http://www.w3.org/2000/svg" width="16" height="16" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2" stroke-linecap="round" stroke-linejoin="round" aria-hidden="true"><path d="M4 4h16c1.1 0 2 .9 2 2v12c0 1.1-.9 2-2 2H4c-1.1 0-2-.9-2-2V6c0-1.1.9-2 2-2z"/><polyline points="22 6 12 13 2 6"/></svg>
+              <a href="mailto:info@fairconstruction.ca">info@fairconstruction.ca</a>
             </li>
           </ul>
         </div>
       </div>
-      <div style="border-top: 1px solid rgba(255,255,255,0.1); padding-top: 2rem; text-align: center;">
-        <p style="color: rgba(255,255,255,0.5); font-size: 0.9rem; margin: 0;">Copyright © 2024 Fair Construction Services. All rights reserved. | Website by miladweb.com</p>
+      <div class="footer-bottom">
+        <p>© <span id="year"></span> Fair Construction Services. All rights reserved. · Website by <a href="https://miladweb.com">miladweb.com</a></p>
       </div>
     </div>
   </footer>
 
-  <!-- LIGHTBOX — all inline styles, zero CSS dependency -->
-  <div id="fc-lb" style="display:none;position:fixed;top:0;left:0;right:0;bottom:0;z-index:99999;background:rgba(0,0,0,0.92);align-items:center;justify-content:center;flex-direction:column;">
-    <div id="fc-lb-bd" style="position:absolute;top:0;left:0;right:0;bottom:0;cursor:pointer;"></div>
-    <button id="fc-lb-x"  style="position:fixed;top:12px;right:18px;background:none;border:none;color:#fff;font-size:42px;line-height:1;cursor:pointer;z-index:2;padding:4px 10px;">&times;</button>
-    <button id="fc-lb-p"  style="position:fixed;left:8px;top:50%;transform:translateY(-50%);background:rgba(210,43,43,.85);border:none;color:#fff;font-size:38px;cursor:pointer;z-index:2;padding:8px 16px;line-height:1;">&#8249;</button>
-    <button id="fc-lb-n"  style="position:fixed;right:8px;top:50%;transform:translateY(-50%);background:rgba(210,43,43,.85);border:none;color:#fff;font-size:38px;cursor:pointer;z-index:2;padding:8px 16px;line-height:1;">&#8250;</button>
-    <img    id="fc-lb-img" src="" alt="" style="position:relative;z-index:1;max-width:90vw;max-height:85vh;object-fit:contain;display:block;box-shadow:0 8px 40px rgba(0,0,0,.6);" />
-    <div    id="fc-lb-inf" style="position:relative;z-index:1;margin-top:10px;color:rgba(255,255,255,.85);font-family:sans-serif;font-size:14px;text-align:center;"></div>
+  <!-- ========== LIGHTBOX ========== -->
+  <div id="fc-lb" class="fc-lb" hidden role="dialog" aria-modal="true" aria-label="Project image viewer">
+    <div id="fc-lb-bd" class="fc-lb-bd"></div>
+    <button id="fc-lb-x" class="fc-lb-btn fc-lb-x" type="button" aria-label="Close">×</button>
+    <button id="fc-lb-p" class="fc-lb-btn fc-lb-p" type="button" aria-label="Previous image">‹</button>
+    <button id="fc-lb-n" class="fc-lb-btn fc-lb-n" type="button" aria-label="Next image">›</button>
+    <img id="fc-lb-img" src="" alt="" />
+    <div id="fc-lb-inf" class="fc-lb-inf"></div>
   </div>
 
+  <style>
+    /* Lightbox styles — kept inline to remain self-contained */
+    .fc-lb {
+      position: fixed; inset: 0; z-index: 9999;
+      background: rgba(15, 23, 33, 0.94);
+      display: flex; align-items: center; justify-content: center;
+      flex-direction: column;
+      animation: lbFade .25s ease;
+    }
+    .fc-lb[hidden] { display: none !important; }
+    @keyframes lbFade { from { opacity: 0 } to { opacity: 1 } }
+    .fc-lb-bd { position: absolute; inset: 0; cursor: pointer; }
+    .fc-lb-btn {
+      position: fixed; z-index: 2;
+      background: rgba(212, 175, 55, 0.92);
+      color: #0f1721;
+      border: none;
+      width: 48px; height: 48px;
+      border-radius: 50%;
+      font-size: 28px; line-height: 1;
+      cursor: pointer;
+      display: flex; align-items: center; justify-content: center;
+      box-shadow: 0 8px 24px rgba(0, 0, 0, 0.4);
+      transition: transform .2s ease, background .2s ease;
+    }
+    .fc-lb-btn:hover { background: #fff; transform: scale(1.08); }
+    .fc-lb-x { top: 18px; right: 18px; }
+    .fc-lb-p { left: 12px; top: 50%; transform: translateY(-50%); }
+    .fc-lb-n { right: 12px; top: 50%; transform: translateY(-50%); }
+    .fc-lb-p:hover, .fc-lb-n:hover { transform: translateY(-50%) scale(1.08); }
+    #fc-lb-img {
+      position: relative; z-index: 1;
+      max-width: 92vw; max-height: 84vh;
+      object-fit: contain;
+      border-radius: 8px;
+      box-shadow: 0 16px 60px rgba(0, 0, 0, 0.6);
+    }
+    .fc-lb-inf {
+      position: relative; z-index: 1;
+      margin-top: 14px;
+      color: rgba(255, 255, 255, 0.9);
+      font: 500 14px 'Inter', sans-serif;
+      text-align: center;
+      max-width: 90vw;
+    }
+    @media (max-width: 600px) {
+      .fc-lb-btn { width: 42px; height: 42px; font-size: 24px; }
+      .fc-lb-x { top: 12px; right: 12px; }
+    }
+  </style>
+
+  <script>document.getElementById('year').textContent = new Date().getFullYear();</script>
+
+  <script src="https://unpkg.com/aos@2.3.4/dist/aos.js"></script>
   <script src="main.js"></script>
 
-  <!-- Gallery lightbox — inline, runs after full DOM + main.js -->
+  <!-- Gallery lightbox -->
   <script>
-  (function(){
+  (function () {
     var lb    = document.getElementById('fc-lb');
     var lbImg = document.getElementById('fc-lb-img');
     var lbInf = document.getElementById('fc-lb-inf');
     var items = Array.from(document.querySelectorAll('.gallery-item[data-full]'));
     var cur   = 0;
 
-    function show(i){
+    function show(i) {
       cur = ((i % items.length) + items.length) % items.length;
       var it  = items[cur];
       var src = it.getAttribute('data-full');
       var cap = it.getAttribute('data-caption') || '';
       lbImg.src = src;
-      lbInf.textContent = (cap ? cap + '  ' : '') + (cur+1) + ' / ' + items.length;
-      lb.style.display = 'flex';
+      lbImg.alt = cap || 'Project image';
+      lbInf.textContent = (cap ? cap + '  ·  ' : '') + (cur + 1) + ' / ' + items.length;
+      lb.hidden = false;
+      document.body.style.overflow = 'hidden';
     }
 
-    function hide(){
-      lb.style.display = 'none';
+    function hide() {
+      lb.hidden = true;
       lbImg.src = '';
+      document.body.style.overflow = '';
     }
 
-    // Direct click on every gallery item
-    items.forEach(function(el, i){
-      el.style.cursor = 'pointer';
-      el.addEventListener('click', function(){ show(i); });
+    items.forEach(function (el, i) {
+      el.setAttribute('role', 'button');
+      el.setAttribute('tabindex', '0');
+      el.addEventListener('click', function () { show(i); });
+      el.addEventListener('keydown', function (e) {
+        if (e.key === 'Enter' || e.key === ' ') { e.preventDefault(); show(i); }
+      });
     });
 
     document.getElementById('fc-lb-x').addEventListener('click', hide);
     document.getElementById('fc-lb-bd').addEventListener('click', hide);
-    document.getElementById('fc-lb-p').addEventListener('click', function(e){ e.stopPropagation(); show(cur-1); });
-    document.getElementById('fc-lb-n').addEventListener('click', function(e){ e.stopPropagation(); show(cur+1); });
+    document.getElementById('fc-lb-p').addEventListener('click', function (e) { e.stopPropagation(); show(cur - 1); });
+    document.getElementById('fc-lb-n').addEventListener('click', function (e) { e.stopPropagation(); show(cur + 1); });
 
-    document.addEventListener('keydown', function(e){
-      if(lb.style.display === 'none') return;
-      if(e.key === 'Escape')     hide();
-      if(e.key === 'ArrowLeft')  show(cur-1);
-      if(e.key === 'ArrowRight') show(cur+1);
+    document.addEventListener('keydown', function (e) {
+      if (lb.hidden) return;
+      if (e.key === 'Escape')     hide();
+      if (e.key === 'ArrowLeft')  show(cur - 1);
+      if (e.key === 'ArrowRight') show(cur + 1);
     });
 
-    // Touch swipe
     var tx = 0;
-    lb.addEventListener('touchstart', function(e){ tx = e.changedTouches[0].clientX; }, {passive:true});
-    lb.addEventListener('touchend',   function(e){
+    lb.addEventListener('touchstart', function (e) { tx = e.changedTouches[0].clientX; }, { passive: true });
+    lb.addEventListener('touchend',   function (e) {
       var dx = e.changedTouches[0].clientX - tx;
-      if(Math.abs(dx) > 40){ dx < 0 ? show(cur+1) : show(cur-1); }
-    }, {passive:true});
+      if (Math.abs(dx) > 40) { dx < 0 ? show(cur + 1) : show(cur - 1); }
+    }, { passive: true });
   })();
   </script>
 </body>
